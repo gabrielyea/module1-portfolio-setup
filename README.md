@@ -2,7 +2,7 @@
 
 # Portfolio - Mobile skeleton app
 
-> Module 1 first solo project, basic page with one main branch, one feature branch and three files.
+> Module 1 portfolio project, skeleton app page with no functionality.
 
 <!--![screenshot](./app_screenshot.png)-->
 
