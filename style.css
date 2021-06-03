@@ -10,8 +10,6 @@ body {
   display: grid;
   grid-template-columns: 375px;
   background-color: blue;
-  gap: 20px 20px;
-  row-gap: 10px;
 }
 
 .main-container {
@@ -115,14 +113,6 @@ nav {
   grid-template-rows: repeat(4, 700px);
 }
 
-.card-works {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-}
-
 .works-title {
   font-family: 'Crete Round', serif;
   font-style: normal;
@@ -139,6 +129,7 @@ nav {
   justify-content: center;
   align-items: center;
   background-color: white;
+  margin: 0 24px;
 }
 
 .card-works-presentation p {
@@ -147,7 +138,7 @@ nav {
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
-  margin: 0 24px;
+  margin: 0;
 }
 
 .card-works-presentation h3 {
@@ -157,4 +148,60 @@ nav {
   font-weight: normal;
   font-size: 32px;
   margin: 12px 0;
+}
+
+.card-works {
+  display: flex;
+  flex-direction: column;
+  margin: 100px 24px;
+  background-image: url(assets/back-1.png);
+  background-repeat: no-repeat;
+}
+
+.pl-categories-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 24px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.pl-block {
+  height: 40px;
+  padding: 10px 12px;
+  border: 1px solid #8993a4;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.24);
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.btn-1 {
+  padding: 12px;
+  font-size: 17px;
+  line-height: 24px;
+  background: #ff6b00;
+  font-weight: bold;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  margin-top: 10px;
+  align-self: flex-start;
+}
+
+.btn-1:hover {
+  color: #f55800;
+  background: #fff5e1;
+  border: 1px solid #f55800;
+  box-sizing: border-box;
+}
+
+.btn-1:active {
+  background: #e05304;
+  color: #ffff;
 }
