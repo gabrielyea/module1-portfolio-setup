@@ -3,6 +3,7 @@ body {
   justify-content: center;
   margin: 0;
   padding: 0;
+  background-color: #fff5e1;
 }
 
 .cards-container {
@@ -43,11 +44,7 @@ h2 {
   margin-bottom: 0;
 }
 
-h3 {
-  color: #1c1a19;
-}
-
-p {
+.headline p {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -120,9 +117,10 @@ nav {
 
 .card-works {
   display: flex;
-  grid-row: span 1;
+  flex-direction: column;
   justify-content: center;
-  background-color: #ff6b00;
+  align-items: center;
+  background-color: white;
 }
 
 .works-title {
@@ -133,4 +131,30 @@ nav {
   font-size: 40px;
   line-height: 52px;
   border-bottom: 1px solid #212121;
+}
+
+.card-works-presentation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.card-works-presentation p {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 24px;
+}
+
+.card-works-presentation h3 {
+  color: #1c1a19;
+  font-family: 'Crete Round', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  margin: 12px 0;
 }
