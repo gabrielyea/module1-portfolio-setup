@@ -3,8 +3,9 @@
 # Portfolio - Mobile skeleton app
 
 > Module 1 portfolio project, skeleton app page with no functionality.
+> The mobile page should be a clone of [this template](https://www.figma.com/file/l7SqJ3ZfkAKih9sFxvWSR4/Microverse-Student-Project-1?node-id=48%3A27)
 
-<!--![screenshot](./app_screenshot.png)-->
+![screenshot](./skeleton-app.png)
 
 <!--Additional description about the project and its features.-->
 
@@ -12,8 +13,8 @@
 - css
 - html
 
-<!--## Live Demo-->
-
+## Live Demo
+[Check it out!](https://gabrielyea.github.io/module1-portfolio-setup/)
 
 
 <!--## Getting Started
