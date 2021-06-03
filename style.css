@@ -66,6 +66,11 @@ nav {
   line-height: 24px;
 }
 
+.logo a {
+  text-decoration: none;
+  color: #ffff;
+}
+
 .menu-btn {
   margin-right: 24px;
   background-color: transparent;
@@ -85,10 +90,13 @@ nav {
 
 .contact-info {
   display: flex;
+}
+
+.contact-info ul {
   padding-left: 5px;
 }
 
 .contact-info li {
   display: inline-flex;
-  padding-right: 10px;
+  padding-right: 5px;
 }
