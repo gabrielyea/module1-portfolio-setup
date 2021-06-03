@@ -14,7 +14,7 @@
 - html
 
 ## Live Demo
-https://gabrielyea.github.io/module1-portfolio-setup/
+[Check it out!](https://gabrielyea.github.io/module1-portfolio-setup/)
 
 
 <!--## Getting Started
