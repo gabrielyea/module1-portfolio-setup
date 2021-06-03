@@ -9,7 +9,7 @@ body {
 .cards-container {
   display: grid;
   grid-template-columns: 375px;
-  background-color: blue;
+  background-color: white;
 }
 
 .main-container {
