@@ -5,6 +5,14 @@ body {
   padding: 0;
 }
 
+.cards-container {
+  display: grid;
+  grid-template-columns: 375px;
+  background-color: blue;
+  gap: 20px 20px;
+  row-gap: 10px;
+}
+
 .main-container {
   display: flex;
   width: 375px;
@@ -35,6 +43,10 @@ h2 {
   margin-bottom: 0;
 }
 
+h3 {
+  color: #1c1a19;
+}
+
 p {
   font-size: 16px;
   line-height: 24px;
@@ -48,7 +60,7 @@ nav {
   display: flex;
   justify-content: space-between;
   background: #3c3a39;
-  position: absolute;
+  position: fixed;
   width: 375px;
   height: 48px;
   color: #ffff;
@@ -99,4 +111,26 @@ nav {
 .contact-info li {
   display: inline-flex;
   padding-right: 5px;
+}
+
+.works-section {
+  display: grid;
+  grid-template-rows: repeat(4, 700px);
+}
+
+.card-works {
+  display: flex;
+  grid-row: span 1;
+  justify-content: center;
+  background-color: #ff6b00;
+}
+
+.works-title {
+  font-family: 'Crete Round', serif;
+  font-style: normal;
+  font-weight: normal;
+  padding-bottom: 40px;
+  font-size: 40px;
+  line-height: 52px;
+  border-bottom: 1px solid #212121;
 }
