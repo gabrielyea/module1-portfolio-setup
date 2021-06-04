@@ -3,7 +3,33 @@ body {
   justify-content: center;
   margin: 0;
   padding: 0;
-  background-color: #fff5e1;
+  background-color: #dbd8d7;
+}
+
+.btn-1 {
+  padding: 12px;
+  font-size: 17px;
+  line-height: 24px;
+  background: #ff6b00;
+  font-weight: bold;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  margin-top: 10px;
+  align-self: flex-start;
+  color: white;
+}
+
+.btn-1:hover {
+  color: #f55800;
+  background: #fff5e1;
+  border: 1px solid #f55800;
+  box-sizing: border-box;
+}
+
+.btn-1:active {
+  background: #e05304;
+  color: #ffff;
 }
 
 .cards-container {
@@ -213,12 +239,17 @@ nav {
   margin: 0 0;
 }
 
-.card-contact-me {
+.card-contact-me section {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0 24px 0 24px;
   height: 700px;
+}
+
+.card-contact-me section .btn-1 {
+  align-self: center;
 }
 
 .card-contact-me h3 {
@@ -246,32 +277,6 @@ nav {
   background: rgba(255, 255, 255, 0.24);
   font-size: 15px;
   line-height: 20px;
-}
-
-.btn-1 {
-  padding: 12px;
-  font-size: 17px;
-  line-height: 24px;
-  background: #ff6b00;
-  font-weight: bold;
-  border: none;
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  margin-top: 10px;
-  align-self: flex-start;
-  color: white;
-}
-
-.btn-1:hover {
-  color: #f55800;
-  background: #fff5e1;
-  border: 1px solid #f55800;
-  box-sizing: border-box;
-}
-
-.btn-1:active {
-  background: #e05304;
-  color: #ffff;
 }
 
 .large-btn {
@@ -352,8 +357,12 @@ textarea {
   resize: none;
 }
 
-footer {
+footer .contact-info ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   border-top: 1px solid #dbd8d7;
-  height: 50px;
+  height: 80px;
   width: 100%;
 }
