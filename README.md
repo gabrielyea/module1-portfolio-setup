@@ -6,7 +6,7 @@
 > The mobile page should be a clone of [this template](https://www.figma.com/file/l7SqJ3ZfkAKih9sFxvWSR4/Microverse-Student-Project-1?node-id=48%3A27)
 
 ![screenshot](./skeleton-app.png)
-![screenshot](./Screenshot from 2021-06-03 20-29-05.png)
+![screenshot](./screenshot-2.png)
 
 <!--Additional description about the project and its features.-->
 
