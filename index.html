@@ -4,7 +4,7 @@
 <head>
   <meta charset='utf-8'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-  <title>Page Title</title>
+  <title>Mobile clone page</title>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -16,7 +16,8 @@
 
 <body>
   <div class="cards-container">
-    <header class="main-container">
+
+    <header class="card-start-screen">
       <nav>
         <div class="logo">
           <a href="#">Logo</a>
@@ -27,13 +28,13 @@
           </button>
         </div>
       </nav>
-
-      <div class="headline">
+      <section class="headline">
         <div>
           <h1>Hey There.
-            I’m Alex</h1>
+            I’m Gabriel</h1>
           <h2>I’am a Software Developer</h2>
-          <p>I can help you build a product , feature or website Look through some of my work and experience! If you
+          <p class="dark">I can help you build a product , feature or website Look through some of my work and
+            experience! If you
             like
             what you see and have a project you need coded,
             don’t hestiate to contact me.</p>
@@ -46,12 +47,11 @@
             <li><a href="#"> <img src="assets/Icon-Medium.png" alt="medium logo"></a></li>
             <li><a href="#"> <img src="assets/Icon-Twitter.png" alt="twitter logo"></a></li>
           </ul>
-
         </div>
-      </div>
+      </section>
     </header>
-    <section class="works-section">
 
+    <section class="works">
       <div class="card">
         <div class="card-presentation">
           <header>
@@ -133,6 +133,87 @@
         <button class="btn-1 large-btn">See Project</button>
       </div>
     </section>
+
+    <section class="about-me">
+      <div class="card">
+        <div class="card-about-me">
+          <header>
+            <h1>
+              About me
+            </h1>
+          </header>
+          <p class="dark">Hello I’m a software developer! I can help you build a product , feature or website Look
+            through some of my work and experience! If you like what you see and have
+            a project you need coded, don’t hestiate to contact me.
+          </p>
+          <button class="btn-1">Get My Resume</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-experience">
+          <section>
+            <h4 class="dark"> <span class="figure-1"></span> Language </h4>
+            <ul class="skill-list dark">
+              <li>JavaScript</li>
+              <li>Ruby</li>
+              <li>Html</li>
+              <li>Css</li>
+            </ul>
+          </section>
+
+          <section>
+            <h4 class="dark"> <span class="figure-2"></span> Frameworks </h4>
+            <ul class="skill-list dark">
+              <li>Bootstrap</li>
+              <li>Ruby on Rails</li>
+              <li>RSPec</li>
+              <li>CapyBara</li>
+              <li>Selenium</li>
+            </ul>
+          </section>
+
+          <section>
+            <h4 class="dark"> <span class="figure-3"></span> Skills </h4>
+            <ul class="skill-list dark">
+              <li>Codekit</li>
+              <li>Github</li>
+              <li>Codepen</li>
+              <li>Gitlab</li>
+              <li>Terminal</li>
+            </ul>
+          </section>
+
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-contact-me">
+          <section>
+            <header>
+              <h3>
+                I'm always interested in hearing about new projects,
+                so if you'd like to chat please get in touch.
+              </h3>
+            </header>
+            <input type="text" id="fname" name="fullname" placeholder="Full name">
+            <input type="email" id="eaddress" name="email" placeholder="Email address">
+            <textarea name="tarea" cols="30" rows="10" placeholder="Enter text here"></textarea>
+          </section>
+
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="contact-info">
+        <ul>
+          <li><a href="#"> <img src="assets/icon-git-dark.png" alt="github logo"></a></li>
+          <li><a href="#"> <img src="assets/icon-link-dark.png" alt="linkedin logo"></a></li>
+          <li><a href="#"> <img src="assets/icon-angel-dark.png" alt="angelist logo"></a></li>
+          <li><a href="#"> <img src="assets/icon-med-dark.png" alt="medium logo"></a></li>
+          <li><a href="#"> <img src="assets/icon-twit-dark.png" alt="twitter logo"></a></li>
+        </ul>
+      </div>
+    </footer>
   </div>
 </body>
 
