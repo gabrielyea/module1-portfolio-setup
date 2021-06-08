@@ -276,6 +276,12 @@ nav {
 .contact-me h3 {
   margin: 0 24px 0 24px;
   text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 44px;
+  color: #172b4d;
 }
 
 .pl-categories-container {
