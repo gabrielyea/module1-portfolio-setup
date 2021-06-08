@@ -401,6 +401,20 @@ footer .contact-info ul {
   width: 100%;
 }
 
+fieldset {
+  border: 0;
+}
+
+input:focus:invalid {
+  box-shadow: 0 0 5px 1px red;
+  outline: none;
+}
+
+input:focus:valid {
+  box-shadow: 0 0 5px 1px green;
+  outline: none;
+}
+
 @font-face {
   font-family: 'InaiMathi';
   src: url('webfonts/InaiMathi.ttf') format('truetype');
