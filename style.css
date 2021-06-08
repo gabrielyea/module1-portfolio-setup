@@ -57,33 +57,36 @@ body {
   background-position-y: 330px;
 }
 
-.card-about-me {
+.about-me-intro {
   display: flex;
   flex-direction: column;
-  height: 500px;
+  width: 375px;
   background-color: #1c1a19;
   background-image: url(assets/illustration-about-me-mobile.png);
   background-repeat: no-repeat;
   background-position-x: 230px;
   background-position-y: 330px;
-  padding: 100px 24px 0 24px;
+  padding: 100px 24px 100px 24px;
+  box-sizing: border-box;
 }
 
-.card-about-me::after {
+.about-me-intro::after {
   content: "";
   display: block;
   margin: 0 auto;
   width: 80%;
   padding-top: 180px;
   border-bottom: 1px solid #8993a4;
+  box-sizing: border-box;
 }
 
-.card-experience {
+.skill-techs {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 1200px;
+  width: 375px;
   background-color: #1c1a19;
   padding-left: 0;
 }
@@ -115,7 +118,7 @@ h2 {
   margin-bottom: 0;
 }
 
-.card-about-me h2 {
+.about-me-intro h2 {
   font-family: 'Crete Round', sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -256,24 +259,22 @@ nav {
   margin: 0 0;
 }
 
-.card-contact-me {
-  background-color: white;
-}
-
-.card-contact-me section {
+.contact-me {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 24px 0 24px;
   height: 700px;
+  width: 375px;
+  background-color: white;
 }
 
-.card-contact-me section .btn-1 {
+.contact-me .btn-1 {
   align-self: center;
 }
 
-.card-contact-me h3 {
+.contact-me h3 {
+  margin: 0 24px 0 24px;
   text-align: center;
 }
 
@@ -375,7 +376,7 @@ textarea {
   font-weight: normal;
   font-size: 15px;
   width: 100%;
-  height: 100px;
+  height: 114px;
   padding: 12px 20px;
   box-sizing: border-box;
   border: 2px none #ccc;
@@ -391,28 +392,25 @@ textarea {
   list-style: none;
 }
 
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border-top: 1px solid #dbd8d7;
+  width: 375px;
+}
+
 footer .contact-info ul {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid #dbd8d7;
   height: 80px;
   width: 100%;
 }
 
 fieldset {
   border: 0;
-}
-
-input:focus:invalid {
-  box-shadow: 0 0 5px 1px red;
-  outline: none;
-}
-
-input:focus:valid {
-  box-shadow: 0 0 5px 1px green;
-  outline: none;
 }
 
 @font-face {
