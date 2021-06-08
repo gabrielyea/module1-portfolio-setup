@@ -275,9 +275,24 @@
 
           <form action="https://formspree.io/f/mbjqyrqj" method="POST">
             <fieldset>
-              <input type="text" id="fname" name="fullname" placeholder="Full name">
-              <input type="email" id="eaddress" name="email" placeholder="Email address">
-              <textarea name="tarea" cols="30" rows="10" placeholder="Enter text here"></textarea>
+              <input 
+                    oninvalid="setCustomValidity('Please enter your full name')"
+                    type="text" 
+                    name="name" 
+                    id="fullname" 
+                    required 
+                    maxlength="30" 
+                    placeholder="Full name"
+                    >
+                    <input 
+                    type="email" 
+                    name="_replyto" 
+                    oninvalid="setCustomValidity('Please enter a valid email')"
+                    id="email" 
+                    required 
+                    placeholder="Email address"
+                    > 
+              <textarea name="tarea" cols="30" required maxlength="500" rows="10" placeholder="Enter text here"></textarea>
             </fieldset>
             <button type="submit" class="btn-1 center">Get in touch</button>
           </form>
