@@ -285,12 +285,15 @@ nav {
 
 .pl-categories-container {
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 10px;
   flex-wrap: wrap;
   padding: 12px 0;
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 500;
-  margin: auto;
 }
 
 .pl-block {
@@ -301,8 +304,6 @@ nav {
   background: rgba(255, 255, 255, 0.24);
   font-size: 15px;
   line-height: 20px;
-  float: left;
-  margin-right: 12px;
 }
 
 .large-btn {
