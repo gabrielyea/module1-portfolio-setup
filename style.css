@@ -9,8 +9,7 @@ body {
 }
 
 .card {
-  width: 375px;
-  clear: left;
+  width: 100%;
 }
 
 .btn-1 {
