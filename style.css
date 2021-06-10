@@ -26,6 +26,10 @@ body {
   color: white;
 }
 
+.text-highligth .btn-1 {
+  margin-left: 25px;
+}
+
 .btn-1:hover {
   color: #f55800;
   background: #fff5e1;
@@ -571,10 +575,22 @@ fieldset {
     height: 448px;
   }
 
+  .desc-highligth h3 {
+    font-family: 'Crete Round', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 52px;
+  }
+
   .text-highligth {
     display: flex;
     flex-direction: column;
     padding: 0 24px 0 24px;
+  }
+
+  .text-highligth .btn-1 {
+    margin-left: 25px;
   }
 
   .project-highligth {
@@ -619,12 +635,18 @@ fieldset {
   .card-works {
     margin: 0 auto 0 auto;
     justify-content: flex-end;
+    align-items: baseline;
     background-position: center;
     background-repeat: no-repeat;
   }
 
   .card-works header h3 {
     flex-direction: column;
+    font-family: 'Crete Round', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 44px;
   }
 
   li.card-works {
@@ -639,6 +661,14 @@ fieldset {
 
   .card-works .large-btn {
     display: none;
+  }
+
+  .card-works p {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 24px;
   }
 
   .card-works.no-content .large-btn {
