@@ -230,7 +230,7 @@ nav {
   content: "";
   display: inline-block;
   margin: 30px auto;
-  width: 95%;
+  width: 60%;
   border: solid #212121;
   border-width: 1px 0 0 0;
   box-sizing: border-box;
@@ -625,7 +625,7 @@ fieldset {
     content: "";
     display: inline-flex;
     margin: 30px 20px;
-    width: 75%;
+    width: 60%;
     border: solid #212121;
     border-width: 1px 0 0 0;
     box-sizing: border-box;
@@ -697,9 +697,9 @@ fieldset {
   }
 
   .about-me-intro {
-    background-image: url(assets/large-background.png);
+    background-image: url(assets/AboutMe-Large.png);
     background-repeat: no-repeat;
-    background-position: right bottom;
+    background-position: right center;
     height: 870px;
     width: 100%;
   }
@@ -721,7 +721,7 @@ fieldset {
   .contact-me {
     display: grid;
     height: 500px;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 45% 55%;
     margin-top: 200px;
     width: 100%;
     align-items: start;
@@ -729,10 +729,17 @@ fieldset {
 
   .contact-me header h3 {
     text-align: left;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 52px;
+    padding-left: 141px;
   }
 
   .contact-me form {
     display: inline-block;
+    width: 660px;
   }
 }
 
