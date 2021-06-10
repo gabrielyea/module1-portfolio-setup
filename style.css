@@ -38,13 +38,6 @@ body {
   color: #ffff;
 }
 
-.cards-container {
-  display: grid;
-  grid-template-columns: 375px;
-  background-color: white;
-  gap: 24px;
-}
-
 .start-screen {
   display: flex;
   height: 700px;
@@ -136,13 +129,6 @@ h2 {
   color: #ff6b00;
 }
 
-h3 {
-  font-family: 'Crete Round', sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 32px;
-}
-
 h4 {
   font-family: 'InaiMathi', sans-serif;
   font-style: normal;
@@ -178,6 +164,10 @@ nav {
   color: #ffff;
 }
 
+.padded-content {
+  padding: 0 24px 0 24px;
+}
+
 .menu-btn {
   margin-right: 24px;
   background-color: transparent;
@@ -205,41 +195,46 @@ nav {
   display: grid;
 }
 
-.works-title {
-  font-family: 'Crete Round', serif;
-  font-style: normal;
-  font-weight: normal;
-  padding-bottom: 40px;
-  font-size: 40px;
-  line-height: 52px;
-  border-bottom: 1px solid #212121;
-}
-
-.card-presentation {
+.project-highligth {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: white;
+}
+
+.desc-highligth {
   margin: 0 24px;
 }
 
-.card-presentation p {
+.project-highligth header h3 {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Crete Round', serif;
+  font-style: normal;
+  font-weight: 400;
+  padding-bottom: 24px;
+  font-size: 40px;
+  line-height: 52px;
+}
+
+.project-highligth header h3::after {
+  content: "";
+  display: inline-block;
+  margin: 30px auto;
+  width: 95%;
+  border: solid #212121;
+  border-width: 1px 0 0 0;
+  box-sizing: border-box;
+}
+
+.project-highligth p {
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
   margin: 0;
-}
-
-.card-presentation h3 {
-  color: #1c1a19;
-  font-family: 'Crete Round', sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 32px;
-  margin: 12px 0;
 }
 
 .card-works {
@@ -250,10 +245,11 @@ nav {
   margin: 100px 24px 0 24px;
   background-image: url(assets/back-1.png);
   background-repeat: no-repeat;
-  padding: 0 24px 0 24px;
+  background-position: center;
+  background-size: 100%;
 }
 
-.card-works h3 {
+.card-works header h3 {
   margin: 90px 0 0 0;
 }
 
@@ -275,7 +271,7 @@ nav {
   align-self: center;
 }
 
-.contact-me h3 {
+.contact-me header h3 {
   margin: 0 24px 0 24px;
   text-align: center;
   font-family: 'Inter', sans-serif;
@@ -315,6 +311,8 @@ nav {
   font-size: 17px;
   width: 100%;
   height: 40px;
+  position: relative;
+  bottom: 0;
   text-align: center;
   display: inline-flex;
   justify-content: center;
@@ -427,6 +425,7 @@ fieldset {
     background-image: url(assets/large-background.png);
     background-repeat: no-repeat;
     background-position: right bottom;
+    height: 870px;
   }
 
   .headline {
@@ -507,6 +506,89 @@ fieldset {
     width: 22px;
     height: 20px;
     display: block;
+  }
+
+  .recent-works {
+    padding: 0 140px 0 140px;
+  }
+
+  .works {
+    display: grid;
+    width: 100%;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .highligth {
+    grid-column: 1 / span 3;
+  }
+
+  .desc-highligth {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .desc-highligth img {
+    width: 684px;
+    height: 448px;
+  }
+
+  .text-highligth {
+    display: flex;
+    flex-direction: column;
+    padding: 0 24px 0 24px;
+  }
+
+  .project-highligth {
+    margin: 0;
+  }
+
+  .project-highligth header {
+    width: 100%;
+  }
+
+  .project-highligth header h3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Crete Round', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 52px;
+  }
+
+  .text-highligth p {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;
+    color: #091e42;
+  }
+
+  .project-highligth header h3::after {
+    content: "";
+    display: inline-flex;
+    margin: 30px 20px;
+    width: 75%;
+    border: solid #212121;
+    border-width: 1px 0 0 0;
+    box-sizing: border-box;
+    padding-right: 24px;
+  }
+
+  li.card-works {
+    padding: 0;
+    margin: 0;
+    width: 369px;
+    height: 435px;
+  }
+
+  .large-btn {
+    position: relative;
+    bottom: -100px;
   }
 }
 
