@@ -207,7 +207,7 @@ nav {
   margin: 0 24px;
 }
 
-.project-highligth header h3 {
+.recent-works header h3 {
   display: flex;
   flex-direction: column;
   font-family: 'Crete Round', serif;
@@ -216,9 +216,11 @@ nav {
   padding-bottom: 24px;
   font-size: 40px;
   line-height: 52px;
+  justify-content: center;
+  align-items: center;
 }
 
-.project-highligth header h3::after {
+.recent-works header h3::after {
   content: "";
   display: inline-block;
   margin: 30px auto;
@@ -241,12 +243,14 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   margin: 100px 24px 0 24px;
   background-image: url(assets/back-1.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
+  min-height: 435px;
+  min-width: 369px;
 }
 
 .card-works header h3 {
@@ -289,10 +293,11 @@ nav {
   justify-content: flex-start;
   gap: 10px;
   flex-wrap: wrap;
-  padding: 12px 0;
+  padding: 12px 0 24px 24px;
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 500;
+  box-sizing: border-box;
 }
 
 .pl-block {
@@ -306,8 +311,6 @@ nav {
 }
 
 .large-btn {
-  padding: 0 0;
-  margin: 0 0;
   font-size: 17px;
   width: 100%;
   height: 40px;
@@ -420,12 +423,23 @@ fieldset {
   border: 0;
 }
 
+.card-works-no-content {
+  display: none;
+  flex-direction: column-reverse;
+}
+
 @media only screen and (min-width: 992px) {
   .start-screen {
     background-image: url(assets/large-background.png);
     background-repeat: no-repeat;
     background-position: right bottom;
     height: 870px;
+  }
+
+  .no-content header,
+  .no-content p,
+  .no-content ul {
+    display: none;
   }
 
   .headline {
@@ -514,9 +528,9 @@ fieldset {
 
   .works {
     display: grid;
-    width: 100%;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 448px 435px 435px;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
   }
 
   .highligth {
@@ -547,10 +561,9 @@ fieldset {
     width: 100%;
   }
 
-  .project-highligth header h3 {
+  .recent-works header h3 {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     font-family: 'Crete Round', sans-serif;
     font-style: normal;
@@ -568,7 +581,7 @@ fieldset {
     color: #091e42;
   }
 
-  .project-highligth header h3::after {
+  .recent-works header h3::after {
     content: "";
     display: inline-flex;
     margin: 30px 20px;
@@ -579,16 +592,55 @@ fieldset {
     padding-right: 24px;
   }
 
+  .card-works {
+    margin: 0 auto 0 auto;
+    justify-content: flex-end;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .card-works header h3 {
+    flex-direction: column;
+  }
+
   li.card-works {
-    padding: 0;
-    margin: 0;
-    width: 369px;
+    min-width: 369px;
     height: 435px;
   }
 
   .large-btn {
     position: relative;
-    bottom: -100px;
+    bottom: 0;
+  }
+
+  .card-works .large-btn {
+    display: none;
+  }
+
+  .card-works.no-content .large-btn {
+    display: block;
+  }
+
+  .no-content {
+    display: flex;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-width: 369px;
+    background-size: 100%;
+  }
+
+
+
+  .back1 {
+    background-image: url(assets/Img-Placeholder-5.png);
+  }
+
+  .back2 {
+    background-image: url(assets/Img-Placeholder-6.png);
+  }
+
+  .back3 {
+    background-image: url(assets/Img-Placeholder-7.png);
   }
 }
 
