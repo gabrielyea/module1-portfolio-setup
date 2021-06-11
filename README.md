@@ -1,13 +1,15 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Portfolio - Mobile skeleton app
+# Portfolio - Desktop and mobile app
 
 > Module 1 portfolio project, skeleton app page with no functionality.
 > The mobile page should be a clone of [this template](https://www.figma.com/file/l7SqJ3ZfkAKih9sFxvWSR4/Microverse-Student-Project-1?node-id=48%3A27)
+> The app is responsive for mobiles and standard PC screens.
 
+![screenshot](./desktop-screenshot.png)
 ![screenshot](./skeleton-app.png)
 ![screenshot](./screenshot-2.png)
-![screenshot](./contact-form.png)
+
 
 <!--Additional description about the project and its features.-->
 
