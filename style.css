@@ -16,7 +16,7 @@ body {
   padding: 12px;
   font-size: 17px;
   line-height: 24px;
-  background: #ff6b00;
+  /* background: #ff6b00; */
   font-weight: bold;
   border: none;
   font-family: 'Inter', sans-serif;
@@ -24,6 +24,12 @@ body {
   margin-top: 10px;
   align-self: flex-start;
   color: white;
+  background-size: 100% 200%;
+  background-image: linear-gradient(to bottom, #ff6b00 50%, #fff5e1 50%);
+  transition: background-position 1s;
+  transition: background-position 1s;
+  transition: background-position 1s;
+  transition: all 0.2s ease-in;
 }
 
 .text-highligth .btn-1 {
@@ -32,7 +38,8 @@ body {
 
 .btn-1:hover {
   color: #f55800;
-  background: #fff5e1;
+  background-position: 0 -100%;
+  /* background: #fff5e1; */
   border: 1px solid #f55800;
   box-sizing: border-box;
 }
@@ -161,6 +168,13 @@ nav {
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
+  animation-name: spin;
+  animation-duration: 1.5s;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 .logo a {
@@ -193,6 +207,11 @@ nav {
 .contact-info li {
   display: inline-flex;
   padding-right: 5px;
+  transition: all 0.3s ease-in;
+}
+
+.contact-info li:hover {
+  transform: scale(1.5);
 }
 
 .works-section {
@@ -540,6 +559,11 @@ fieldset {
     font-weight: 600;
     font-size: 15px;
     line-height: 20px;
+    transition: all 0.3s ease-in;
+  }
+
+  .page-links a:hover {
+    font-size: 18px;
   }
 
   .mail-icon {
@@ -638,6 +662,11 @@ fieldset {
     align-items: baseline;
     background-position: center;
     background-repeat: no-repeat;
+    transition: all 0.3s ease-in;
+  }
+
+  .card-works:hover {
+    transform: scale(1.1);
   }
 
   .card-works header h3 {
