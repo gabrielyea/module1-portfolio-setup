@@ -169,16 +169,12 @@ nav {
 }
 
 @keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-
   to {
     transform: rotate(360deg);
   }
 }
 
-.logo a {
+a.logo {
   text-decoration: none;
   color: #ffff;
 }
@@ -208,7 +204,7 @@ nav {
 .contact-info li {
   display: inline-flex;
   padding-right: 5px;
-  transition: all 0.3s ease-in;
+  transition: transform 0.3s ease-in;
 }
 
 .works li {
@@ -395,7 +391,7 @@ form {
   align-items: center;
 }
 
-input {
+.contact-me input {
   width: 80%;
   font-family: 'Inter', sans-serif;
   font-style: normal;
@@ -560,7 +556,7 @@ fieldset {
     font-weight: 600;
     font-size: 15px;
     line-height: 20px;
-    transition: all 0.3s ease-in;
+    transition: font-size 0.3s ease-in;
   }
 
   .page-links a:hover {
@@ -663,7 +659,7 @@ fieldset {
     align-items: baseline;
     background-position: center;
     background-repeat: no-repeat;
-    transition: all 0.3s ease-in;
+    transition: scale 0.3s ease-in;
   }
 
   .card-works:hover {
