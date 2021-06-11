@@ -178,7 +178,7 @@ nav {
   }
 }
 
-.logo a {
+a.logo {
   text-decoration: none;
   color: #ffff;
 }
