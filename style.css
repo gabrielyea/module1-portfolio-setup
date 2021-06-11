@@ -27,8 +27,6 @@ body {
   background-size: 100% 200%;
   background-image: linear-gradient(to bottom, #ff6b00 50%, #fff5e1 50%);
   transition: background-position 1s;
-  transition: background-position 1s;
-  transition: background-position 1s;
   transition: all 0.2s ease-in;
 }
 
@@ -173,8 +171,13 @@ nav {
 }
 
 @keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .logo a {
