@@ -1,4 +1,5 @@
 $color_main_orange: #f55800;
+$color_main_black: #1c1a19;
 $color_dark_orange: #e05304;
 $color_main_text: white;
 $color_second_text: #f4f5f7;
@@ -9,6 +10,11 @@ $color_area_text: #3c3a39;
 $color_back1: #1c1a19;
 $color_back2: #3c3a39;
 $main_title_font: 'Crete Round', sans-serif;
+
+%generalPadding {
+  padding-left: 24px;
+  padding-right: 24px;
+}
 
 @mixin sectionTitle($size, $height, $color) {
   font-family: 'Crete Round', sans-serif;
@@ -28,9 +34,18 @@ $main_title_font: 'Crete Round', sans-serif;
   color: $color;
 }
 
-@mixin flexCenter($direction) {
+@mixin flexCenter($direction:column) {
   display: flex;
   flex-direction: $direction;
   justify-content: center;
   align-items: center;
+}
+
+@mixin projectParagraph($sice: 16px, $height: 24px, $color: $color_third_text) {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $sice;
+  line-height: $height;
+  color: $color;
 }

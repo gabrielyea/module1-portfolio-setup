@@ -1,15 +1,13 @@
 @import './resets';
 @import './variables';
 @import './start-screen';
+@import './recent-works';
+@import './interface';
 
 body {
   @include flexCenter(column);
 
   background-color: $color_main_text;
-  // Maby this should be in a different file for mobile breakpoints
-  .page-links {
-    display: none;
-  }
 }
 
 @media only screen and (min-width: 992px) {

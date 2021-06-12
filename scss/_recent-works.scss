@@ -1,0 +1,86 @@
+.recent-works {
+  @include flexCenter;
+
+  & header {
+    h3 {
+      @include sectionTitle(40px, 52px, $color_main_black);
+
+      width: 100%;
+    }
+  }
+
+  hr {
+    width: 90%;
+    margin-top: 24px;
+    margin-bottom: 50px;
+    border: solid #212121;
+    border-width: 1px 0 0 0;
+  }
+
+  .works {
+    @extend %generalPadding;
+
+    @include flexCenter;
+
+    gap: 50px;
+    list-style: none;
+
+    h3 {
+      @include sectionTitle(32px, 44px, $color_third_text);
+    }
+
+    p {
+      @include projectParagraph;
+    }
+
+    .desc-highligth {
+      @include flexCenter;
+    }
+
+    .pl-categories-container {
+      @include flexCenter(row);
+
+      @extend %generalPadding;
+
+      justify-content: flex-start;
+      gap: 12px;
+      list-style: none;
+
+      .pl-block {
+        height: 40px;
+        padding: 10px 12px;
+        border: 1px solid #8993a4;
+        background: rgba(255, 255, 255, 0.24);
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 20px;
+      }
+    }
+
+    .card-works {
+      @include flexCenter;
+
+      align-items: flex-start;
+      justify-content: flex-end;
+
+      h3 {
+        @extend %generalPadding;
+
+        color: $color_main_text;
+      }
+
+      p {
+        @extend %generalPadding;
+
+        color: $color_main_text;
+      }
+
+      height: 380px;
+      color: $color_main_text;
+      background-image: url(../assets/back-1.png);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: center;
+    }
+  }
+}
