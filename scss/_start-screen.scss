@@ -1,0 +1,20 @@
+.start-screen {
+  @include sectionTitle(56px, 64px, $color_main_orange);
+
+  background-color: $color_input_text;
+
+  nav {
+    @include flexCenter(row);
+
+    justify-content: space-around;
+    background-color: $color_back2;
+    height: 46px;
+    width: 100%;
+    position: fixed;
+
+    .logo {
+      text-decoration: none;
+      color: $color_main_text;
+    }
+  }
+}
