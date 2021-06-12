@@ -2,15 +2,18 @@
 @import './variables';
 @import './start-screen';
 
-@mixin flexCenter($direction) {
-  display: flex;
-  flex-direction: $direction;
-  justify-content: center;
-  align-items: center;
-}
-
 body {
   @include flexCenter(column);
 
   background-color: $color_main_text;
+  // Maby this should be in a different file for mobile breakpoints
+  .page-links {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  * {
+    display: none;
+  }
 }

@@ -19,6 +19,15 @@ $main_title_font: 'Crete Round', sans-serif;
   color: $color;
 }
 
+@mixin robotoTitle($sice, $height, $color) {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: $sice;
+  line-height: $height;
+  color: $color;
+}
+
 @mixin flexCenter($direction) {
   display: flex;
   flex-direction: $direction;
