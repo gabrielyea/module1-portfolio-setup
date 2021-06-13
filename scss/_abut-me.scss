@@ -1,0 +1,33 @@
+.about-me-intro {
+  @include flexCenter;
+
+  height: 700px;
+  background-image: url(../assets/illustration-about-me-mobile.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  position: relative;
+
+  .about-me-headline {
+    @include flexCenter;
+    @include sectionTitle;
+
+    @extend %generalPadding;
+
+    gap: 20px;
+  }
+
+  p {
+    @include projectParagraph(16px, 24px, $color_second_text);
+  }
+
+  background-color: $color_back1;
+
+  hr {
+    width: 90%;
+    position: absolute;
+    bottom: 0;
+    border: solid $color_input_text;
+    border-width: 1px 0 0 0;
+    margin: auto;
+  }
+}

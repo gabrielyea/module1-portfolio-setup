@@ -8,22 +8,22 @@
   font-style: normal;
   margin-top: 10px;
   align-self: flex-start;
-  color: white;
+  color: $color_main_text;
   background-size: 100% 200%;
-  background-image: linear-gradient(to bottom, #ff6b00 50%, #fff5e1 50%);
+  background-image: linear-gradient(to bottom, $color_main_orange 50%, #fff5e1 50%);
   transition: all 0.1s ease-in;
 }
 
 .btn-1:hover {
-  color: #f55800;
+  color: $color_main_orange;
   background-position: 0 -100%;
-  border: 1px solid #f55800;
+  border: 1px solid $color_main_orange;
   box-sizing: border-box;
 }
 
 .btn-1:active {
-  background: #e05304;
-  color: #ffff;
+  background: $color_dark_orange;
+  color: $color_main_text;
 }
 
 .large-btn {

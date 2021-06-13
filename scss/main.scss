@@ -3,6 +3,9 @@
 @import './start-screen';
 @import './recent-works';
 @import './interface';
+@import './abut-me';
+@import './skill-techs';
+@import './contact-me';
 
 body {
   @include flexCenter(column);

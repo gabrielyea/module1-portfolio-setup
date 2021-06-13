@@ -1,0 +1,38 @@
+.skill-techs {
+  @include flexCenter;
+
+  gap: 24px;
+  background-color: $color_back1;
+  width: 100%;
+  height: 1000px;
+
+  .tech-list {
+    @include flexCenter;
+    @include sectionTitle(32px, 44px, $color_main_text);
+
+    .figure-1 {
+      content: url(../assets/fig1.png);
+      width: 18px;
+      height: 18px;
+    }
+
+    .figure-2 {
+      content: url(../assets/fig2.png);
+      width: 18px;
+      height: 18px;
+    }
+
+    .figure-3 {
+      content: url(../assets/fig3.png);
+      width: 18px;
+      height: 18px;
+    }
+
+    ul {
+      @include projectParagraph(22px, 43px, $color_main_text);
+      @include flexCenter;
+
+      list-style: none;
+    }
+  }
+}

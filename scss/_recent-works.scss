@@ -18,23 +18,37 @@
   }
 
   .works {
-    @extend %generalPadding;
-
     @include flexCenter;
 
     gap: 50px;
     list-style: none;
 
-    h3 {
-      @include sectionTitle(32px, 44px, $color_third_text);
-    }
-
-    p {
-      @include projectParagraph;
+    li {
+      margin: auto;
     }
 
     .desc-highligth {
       @include flexCenter;
+
+      .text-highligth {
+        width: 100%;
+
+        #high-h3 {
+          @include sectionTitle(32px, 44px, $color_third_text);
+
+          margin: 24px;
+        }
+
+        #high-p {
+          @include projectParagraph;
+
+          margin: 24px;
+        }
+
+        .btn-1 {
+          margin: 24px;
+        }
+      }
     }
 
     .pl-categories-container {
@@ -45,6 +59,7 @@
       justify-content: flex-start;
       gap: 12px;
       list-style: none;
+      margin-top: 24px;
 
       .pl-block {
         height: 40px;
@@ -60,14 +75,14 @@
     .card-works {
       @include flexCenter;
 
-      align-items: flex-start;
-      justify-content: flex-end;
-
       h3 {
         @extend %generalPadding;
 
         color: $color_main_text;
       }
+
+      align-items: flex-start;
+      justify-content: flex-end;
 
       p {
         @extend %generalPadding;

@@ -5,7 +5,7 @@
   padding: 0;
 }
 
-.start-screen .headline, .start-screen .headline .contact-info, .recent-works .works, .recent-works .works .pl-categories-container, .recent-works .works .card-works h3, .recent-works .works .card-works p {
+.start-screen .headline, .start-screen .headline .contact-info, .recent-works .works .pl-categories-container, .recent-works .works .card-works h3, .recent-works .works .card-works p, .about-me-intro .about-me-headline, .contact-me header, .contact-me fieldset {
   padding-left: 24px;
   padding-right: 24px;
 }
@@ -186,22 +186,8 @@
   list-style: none;
 }
 
-.recent-works .works h3 {
-  font-family: 'Crete Round', sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 32px;
-  line-height: 44px;
-  color: #091e42;
-}
-
-.recent-works .works p {
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 24px;
-  color: #091e42;
+.recent-works .works li {
+  margin: auto;
 }
 
 .recent-works .works .desc-highligth {
@@ -218,6 +204,34 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.recent-works .works .desc-highligth .text-highligth {
+  width: 100%;
+}
+
+.recent-works .works .desc-highligth .text-highligth #high-h3 {
+  font-family: 'Crete Round', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 44px;
+  color: #091e42;
+  margin: 24px;
+}
+
+.recent-works .works .desc-highligth .text-highligth #high-p {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #091e42;
+  margin: 24px;
+}
+
+.recent-works .works .desc-highligth .text-highligth .btn-1 {
+  margin: 24px;
 }
 
 .recent-works .works .pl-categories-container {
@@ -239,6 +253,7 @@
           justify-content: flex-start;
   gap: 12px;
   list-style: none;
+  margin-top: 24px;
 }
 
 .recent-works .works .pl-categories-container .pl-block {
@@ -300,8 +315,8 @@
       align-self: flex-start;
   color: white;
   background-size: 100% 200%;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ff6b00), color-stop(50%, #fff5e1));
-  background-image: linear-gradient(to bottom, #ff6b00 50%, #fff5e1 50%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #f55800), color-stop(50%, #fff5e1));
+  background-image: linear-gradient(to bottom, #f55800 50%, #fff5e1 50%);
   -webkit-transition: all 0.1s ease-in;
   transition: all 0.1s ease-in;
 }
@@ -316,7 +331,7 @@
 
 .btn-1:active {
   background: #e05304;
-  color: #ffff;
+  color: white;
 }
 
 .large-btn {
@@ -335,6 +350,237 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.about-me-intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 700px;
+  background-image: url(../assets/illustration-about-me-mobile.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  position: relative;
+  background-color: #1c1a19;
+}
+
+.about-me-intro .about-me-headline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Crete Round', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 56px;
+  line-height: 64px;
+  color: #f55800;
+  gap: 20px;
+}
+
+.about-me-intro p {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #f4f5f7;
+}
+
+.about-me-intro hr {
+  width: 90%;
+  position: absolute;
+  bottom: 0;
+  border: solid #979493;
+  border-width: 1px 0 0 0;
+  margin: auto;
+}
+
+.skill-techs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 24px;
+  background-color: #1c1a19;
+  width: 100%;
+  height: 1000px;
+}
+
+.skill-techs .tech-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Crete Round', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 44px;
+  color: white;
+}
+
+.skill-techs .tech-list .figure-1 {
+  content: url(../assets/fig1.png);
+  width: 18px;
+  height: 18px;
+}
+
+.skill-techs .tech-list .figure-2 {
+  content: url(../assets/fig2.png);
+  width: 18px;
+  height: 18px;
+}
+
+.skill-techs .tech-list .figure-3 {
+  content: url(../assets/fig3.png);
+  width: 18px;
+  height: 18px;
+}
+
+.skill-techs .tech-list ul {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 43px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+.contact-me {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact-me header {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 44px;
+  color: #091e42;
+  text-align: center;
+}
+
+.contact-me fieldset {
+  border: 0;
+}
+
+.contact-me fieldset input {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 20px;
+  color: #979493;
+  width: 100%;
+  outline: 0;
+  border-width: 0 0 1px;
+  border-color: #dbd8d7;
+  padding: 24px;
+}
+
+.contact-me fieldset textarea {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 20px;
+  color: #3c3a39;
+  margin-top: 30px;
+  width: 100%;
+  height: 114px;
+  padding: 12px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px none #ccc;
+  background-color: #fbf8f7;
+  resize: none;
+}
+
+.contact-me form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.contact-me form .btn-1 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 body {

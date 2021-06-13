@@ -16,7 +16,7 @@ $main_title_font: 'Crete Round', sans-serif;
   padding-right: 24px;
 }
 
-@mixin sectionTitle($size, $height, $color) {
+@mixin sectionTitle($size: 56px, $height: 64px, $color: $color_main_orange) {
   font-family: 'Crete Round', sans-serif;
   font-style: normal;
   font-weight: normal;
