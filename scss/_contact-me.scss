@@ -1,6 +1,8 @@
 .contact-me {
   @include flexCenter;
 
+  height: 800px;
+
   header {
     @include projectParagraph(32px, 44px, $color_third_text);
 

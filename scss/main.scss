@@ -6,6 +6,7 @@
 @import './abut-me';
 @import './skill-techs';
 @import './contact-me';
+@import './footer';
 
 body {
   @include flexCenter(column);

@@ -1,0 +1,18 @@
+footer {
+  border-top: 1px solid #dbd8d7;
+  width: 100%;
+
+  ul {
+    @include flexCenter(row);
+
+    list-style: none;
+
+    li {
+      transition: transform 0.3s ease-in;
+    }
+
+    li:hover {
+      transform: scale(1.5);
+    }
+  }
+}
