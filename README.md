@@ -18,6 +18,7 @@
 - html
 
 ## Live Demo
+You can see my page live here: 
 [Check it out!](https://gabrielyea.github.io/module1-portfolio-setup/)
 
 
