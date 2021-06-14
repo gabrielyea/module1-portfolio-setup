@@ -1,4 +1,4 @@
-@use "../utils" as *;
+@use "../utils"as *;
 
 .recent-works {
   @include flexCenter;
@@ -26,7 +26,7 @@
     list-style: none;
 
     li {
-      margin: auto;
+      margin: 0;
     }
 
     .desc-highligth {
@@ -98,6 +98,75 @@
       background-repeat: no-repeat;
       background-size: 100%;
       background-position: center;
+    }
+
+    @include desktopResolution {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+
+      .desc-highligth {
+        @include flexCenter(row);
+
+        & img {
+          width: 684px;
+          height: 448px;
+        }
+
+        .text-highligth {
+          width: 100%;
+
+          #high-h3 {
+            @include sectionTitle(32px, 44px, $color_third_text);
+
+            margin: 24px;
+          }
+
+          #high-p {
+            @include projectParagraph;
+
+            margin: 24px;
+          }
+
+          .btn-1 {
+            margin: 24px;
+          }
+        }
+      }
+
+      .highligth {
+        grid-column: 1 / span 3;
+      }
+
+      .card-works {
+        margin: 0 auto 0 auto;
+        justify-content: flex-end;
+        align-items: baseline;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: scale 0.3s ease-in;
+
+        ul {
+          margin-bottom: 24px;
+        }
+
+        & button {
+          display: none;
+        }
+
+        &.no-content {
+          width: 100%;
+
+          button {
+            display: block;
+          }
+
+          header,
+          p,
+          ul {
+            display: none;
+          }
+        }
+      }
     }
   }
 }

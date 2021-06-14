@@ -159,7 +159,7 @@ footer ul li:hover {
   list-style: none;
 }
 .recent-works .works li {
-  margin: auto;
+  margin: 0;
 }
 .recent-works .works .desc-highligth {
   display: flex;
@@ -229,6 +229,74 @@ footer ul li:hover {
 }
 .recent-works .works .card-works p {
   color: white;
+}
+@media only screen and (min-width: 992px) {
+  .recent-works .works {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .recent-works .works .desc-highligth {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .recent-works .works .desc-highligth img {
+    width: 684px;
+    height: 448px;
+  }
+  .recent-works .works .desc-highligth .text-highligth {
+    width: 100%;
+  }
+  .recent-works .works .desc-highligth .text-highligth #high-h3 {
+    font-family: "Crete Round", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 44px;
+    color: #091e42;
+    margin: 24px;
+  }
+  .recent-works .works .desc-highligth .text-highligth #high-p {
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #091e42;
+    margin: 24px;
+  }
+  .recent-works .works .desc-highligth .text-highligth .btn-1 {
+    margin: 24px;
+  }
+  .recent-works .works .highligth {
+    grid-column: 1/span 3;
+  }
+  .recent-works .works .card-works {
+    margin: 0 auto 0 auto;
+    justify-content: flex-end;
+    align-items: baseline;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: scale 0.3s ease-in;
+  }
+  .recent-works .works .card-works ul {
+    margin-bottom: 24px;
+  }
+  .recent-works .works .card-works button {
+    display: none;
+  }
+  .recent-works .works .card-works.no-content {
+    width: 100%;
+  }
+  .recent-works .works .card-works.no-content button {
+    display: block;
+  }
+  .recent-works .works .card-works.no-content header,
+.recent-works .works .card-works.no-content p,
+.recent-works .works .card-works.no-content ul {
+    display: none;
+  }
 }
 
 .skill-techs {
@@ -315,6 +383,11 @@ footer ul li:hover {
   background-image: url(../../assets/Illustration.png);
   background-repeat: no-repeat;
   background-position: bottom right;
+}
+@media only screen and (min-width: 992px) {
+  .start-screen .headline {
+    background-image: url(../../assets/large-background.png);
+  }
 }
 .start-screen .headline h1 {
   font-family: "Crete Round", sans-serif;

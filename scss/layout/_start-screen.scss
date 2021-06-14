@@ -25,6 +25,10 @@
 
     @include flexCenter(column);
 
+    @include desktopResolution {
+      background-image: url(../../assets/large-background.png);
+    }
+
     height: 650px;
     background-color: $color_back1;
     background-image: url(../../assets/Illustration.png);
