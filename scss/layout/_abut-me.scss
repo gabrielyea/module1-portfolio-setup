@@ -1,8 +1,10 @@
+@use "../utils" as *;
+
 .about-me-intro {
   @include flexCenter;
 
   height: 700px;
-  background-image: url(../assets/illustration-about-me-mobile.png);
+  background-image: url(../../assets/illustration-about-me-mobile.png);
   background-repeat: no-repeat;
   background-position: bottom right;
   position: relative;

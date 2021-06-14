@@ -1,12 +1,7 @@
-@import './resets';
-@import './variables';
-@import './start-screen';
-@import './recent-works';
-@import './interface';
-@import './abut-me';
-@import './skill-techs';
-@import './contact-me';
-@import './footer';
+@use './base' as *;
+@use './utils' as *;
+@use './layout' as *;
+@use './components/' as *;
 
 body {
   @include flexCenter(column);

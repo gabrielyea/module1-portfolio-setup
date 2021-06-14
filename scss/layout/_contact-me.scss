@@ -1,3 +1,5 @@
+@use "../utils" as *;
+
 .contact-me {
   @include flexCenter;
 

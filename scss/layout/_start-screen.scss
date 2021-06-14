@@ -1,3 +1,5 @@
+@use "../utils" as *;
+
 .start-screen {
   nav {
     @include flexCenter(row);
@@ -38,9 +40,9 @@
 
     @include flexCenter(column);
 
-    height: 590px;
+    height: 650px;
     background-color: $color_back1;
-    background-image: url(../assets/Illustration.png);
+    background-image: url(../../assets/Illustration.png);
     background-repeat: no-repeat;
     background-position: bottom right;
 
