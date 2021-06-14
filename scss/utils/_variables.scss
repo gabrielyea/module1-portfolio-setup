@@ -49,3 +49,9 @@ $main_title_font: 'Crete Round', sans-serif;
   line-height: $height;
   color: $color;
 }
+
+@mixin desktopResolution {
+  @media only screen and (min-width: 992px) {
+    @content;
+  }
+}

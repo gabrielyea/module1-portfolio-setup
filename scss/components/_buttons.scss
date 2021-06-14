@@ -1,4 +1,4 @@
-@use "../utils" as *;
+@use "../utils"as *;
 
 .btn-1 {
   padding: 12px;
@@ -38,4 +38,50 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
+
+.page-links {
+  display: none;
+
+  @include desktopResolution {
+    display: flex;
+    list-style: none;
+    margin-right: 50px;
+    gap: 32px;
+  }
+}
+
+.page-links a {
+  font-family: 'Inter', sans-serif;
+  text-decoration: none;
+  color: #ffff;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  transition: font-size 0.3s ease-in;
+}
+
+.page-links a:hover {
+  font-size: 18px;
+}
+
+.mail-icon {
+  background-image: url(../../assets/Icon-Mail.png);
+  width: 22px;
+  height: 20px;
+  display: block;
+}
+
+.menu-btn {
+  margin-right: 36px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+
+  @include desktopResolution {
+    display: none;
+  }
 }

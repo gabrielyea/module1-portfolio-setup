@@ -305,18 +305,6 @@ footer ul li:hover {
   font-style: normal;
   font-weight: bold;
 }
-.start-screen nav .menu-btn {
-  margin-right: 36px;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  border: none;
-  cursor: pointer;
-  overflow: hidden;
-  outline: none;
-}
-.start-screen nav .page-links {
-  display: none;
-}
 .start-screen .headline {
   display: flex;
   flex-direction: column;
@@ -336,6 +324,16 @@ footer ul li:hover {
   line-height: 64px;
   color: #f55800;
 }
+@media only screen and (min-width: 992px) {
+  .start-screen .headline h1 {
+    font-family: "Crete Round", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 72px;
+    line-height: 81px;
+    color: #f55800;
+  }
+}
 .start-screen .headline h2 {
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -344,6 +342,16 @@ footer ul li:hover {
   line-height: 32px;
   color: #fff5e1;
 }
+@media only screen and (min-width: 992px) {
+  .start-screen .headline h2 {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 44px;
+    color: white;
+  }
+}
 .start-screen .headline p {
   font-family: "Poppins", sans-serif;
   font-style: normal;
@@ -351,6 +359,16 @@ footer ul li:hover {
   font-size: 16px;
   line-height: 24px;
   color: white;
+}
+@media only screen and (min-width: 992px) {
+  .start-screen .headline p {
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 32px;
+    color: white;
+  }
 }
 .start-screen .headline .contact-info {
   width: 100%;
@@ -364,6 +382,33 @@ footer ul li:hover {
   align-items: center;
   justify-content: start;
   gap: 12px;
+}
+@media only screen and (min-width: 992px) {
+  .start-screen .headline {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    height: 800px;
+  }
+  .start-screen .headline .contact-info {
+    width: max-content;
+    margin-right: 100px;
+  }
+  .start-screen .headline .contact-info ul {
+    flex-direction: column;
+  }
+  .start-screen .headline-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    align-items: flex-start;
+    width: 500px;
+    margin-right: 40%;
+  }
 }
 
 .btn-1 {
@@ -406,18 +451,57 @@ footer ul li:hover {
   align-items: center;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
+.page-links {
+  display: none;
+}
+@media only screen and (min-width: 992px) {
+  .page-links {
+    display: flex;
+    list-style: none;
+    margin-right: 50px;
+    gap: 32px;
+  }
 }
 
+.page-links a {
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+  color: #ffff;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  transition: font-size 0.3s ease-in;
+}
+
+.page-links a:hover {
+  font-size: 18px;
+}
+
+.mail-icon {
+  background-image: url(../../assets/Icon-Mail.png);
+  width: 22px;
+  height: 20px;
+  display: block;
+}
+
+.menu-btn {
+  margin-right: 36px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}
 @media only screen and (min-width: 992px) {
-  * {
+  .menu-btn {
     display: none;
   }
+}
+
+body {
+  width: 100%;
+  background-color: white;
 }
 
 /*# sourceMappingURL=main.css.map */

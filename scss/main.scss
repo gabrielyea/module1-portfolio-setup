@@ -4,13 +4,6 @@
 @use './components/' as *;
 
 body {
-  @include flexCenter(column);
-
+  width: 100%;
   background-color: $color_main_text;
-}
-
-@media only screen and (min-width: 992px) {
-  * {
-    display: none;
-  }
 }

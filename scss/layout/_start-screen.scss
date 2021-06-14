@@ -1,4 +1,4 @@
-@use "../utils" as *;
+@use "../utils"as *;
 
 .start-screen {
   nav {
@@ -18,21 +18,6 @@
       font-style: normal;
       font-weight: bold;
     }
-
-    .menu-btn {
-      margin-right: 36px;
-      background-color: transparent;
-      background-repeat: no-repeat;
-      border: none;
-      cursor: pointer;
-      overflow: hidden;
-      outline: none;
-    }
-
-    // Maby this should be in a different file for mobile breakpoints
-    .page-links {
-      display: none;
-    }
   }
 
   .headline {
@@ -48,10 +33,18 @@
 
     h1 {
       @include sectionTitle(56px, 64px, $color_main_orange);
+
+      @include desktopResolution {
+        @include sectionTitle(72px, 81px, $color_main_orange);
+      }
     }
 
     h2 {
       @include robotoTitle(24px, 32px, #fff5e1);
+
+      @include desktopResolution {
+        @include robotoTitle(32px, 44px, $color_main_text);
+      }
     }
 
     p {
@@ -61,6 +54,10 @@
       font-size: 16px;
       line-height: 24px;
       color: $color_main_text;
+
+      @include desktopResolution {
+        @include projectParagraph(20px, 32px, $color_main_text);
+      }
     }
 
     .contact-info {
@@ -75,6 +72,31 @@
         align-items: center;
         justify-content: start;
         gap: 12px;
+      }
+    }
+
+    @include desktopResolution {
+      @include flexCenter(row);
+
+      flex-direction: row-reverse;
+      height: 800px;
+
+      .contact-info {
+        width: max-content;
+        margin-right: 100px;
+
+        ul {
+          flex-direction: column;
+        }
+      }
+
+      &-content {
+        @include flexCenter(column);
+
+        justify-content: center;
+        align-items: flex-start;
+        width: 500px;
+        margin-right: 40%;
       }
     }
   }
