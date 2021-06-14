@@ -41,7 +41,8 @@ To get a local copy up and running follow these simple example steps.
 ### Run tests
 
 ### Deployment-->
-
+## Google Analytics Integration
+![screenshot](./assets/googleanalytics.png)
 
 
 ## Authors
