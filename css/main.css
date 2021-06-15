@@ -263,7 +263,7 @@ footer ul li:hover {
   justify-content: flex-end;
   height: 380px;
   color: white;
-  background-image: url(../../assets/back-1.png);
+  background-image: url(../assets/back-1.png);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
@@ -437,13 +437,13 @@ footer ul li:hover {
   align-items: center;
   height: 650px;
   background-color: #1c1a19;
-  background-image: url(../../assets/Illustration.png);
+  background-image: url(../assets/Illustration.png);
   background-repeat: no-repeat;
   background-position: bottom right;
 }
 @media only screen and (min-width: 992px) {
   .start-screen .headline {
-    background-image: url(../../assets/large-background.png);
+    background-image: url(../assets/large-background.png);
   }
 }
 .start-screen .headline h1 {
@@ -512,6 +512,7 @@ footer ul li:hover {
   align-items: center;
   justify-content: start;
   gap: 12px;
+  list-style: none;
 }
 @media only screen and (min-width: 992px) {
   .start-screen .headline {
