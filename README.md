@@ -18,6 +18,7 @@
 - html
 
 ## Live Demo
+You can see my page live here: 
 [Check it out!](https://gabrielyea.github.io/module1-portfolio-setup/)
 
 
@@ -40,7 +41,8 @@ To get a local copy up and running follow these simple example steps.
 ### Run tests
 
 ### Deployment-->
-
+## Google Analytics Integration
+![screenshot](./assets/googleanalytics.png)
 
 
 ## Authors
