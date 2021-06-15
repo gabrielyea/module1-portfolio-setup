@@ -17,9 +17,15 @@
   height: 700px;
   background-image: url(../../assets/illustration-about-me-mobile.png);
   background-repeat: no-repeat;
-  background-position: bottom right;
   position: relative;
+  background-position: bottom right;
   background-color: #1c1a19;
+}
+@media only screen and (min-width: 992px) {
+  .about-me-intro {
+    background-image: url(../../assets/AboutMe-Large.png);
+    background-position: center right;
+  }
 }
 .about-me-intro .about-me-headline {
   display: flex;
@@ -43,12 +49,31 @@
   color: #f4f5f7;
 }
 .about-me-intro hr {
-  width: 90%;
+  width: 80%;
   position: absolute;
   bottom: 0;
   border: solid #979493;
   border-width: 1px 0 0 0;
   margin: auto;
+}
+@media only screen and (min-width: 992px) {
+  .about-me-intro {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 130px 0 130px;
+  }
+  .about-me-intro .about-me-headline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-items: baseline;
+    width: 50%;
+  }
 }
 
 .contact-me {
@@ -463,11 +488,12 @@ footer ul li:hover {
     justify-content: center;
     align-items: center;
     flex-direction: row-reverse;
+    justify-content: flex-end;
     height: 800px;
   }
   .start-screen .headline .contact-info {
-    width: max-content;
     margin-right: 100px;
+    width: 100px;
   }
   .start-screen .headline .contact-info ul {
     flex-direction: column;
@@ -479,8 +505,7 @@ footer ul li:hover {
     align-items: center;
     justify-content: center;
     align-items: flex-start;
-    width: 500px;
-    margin-right: 40%;
+    width: 50%;
   }
 }
 
