@@ -1,0 +1,76 @@
+@use "../utils" as *;
+
+.contact-me {
+  @include flexCenter;
+
+  height: 800px;
+
+  header {
+    @include projectParagraph(32px, 44px, $color_third_text);
+
+    @extend %generalPadding;
+
+    text-align: center;
+  }
+
+  fieldset {
+    @extend %generalPadding;
+
+    border: 0;
+
+    input {
+      @include projectParagraph(15px, 20px, $color_input_text);
+
+      width: 100%;
+      outline: 0;
+      border-width: 0 0 1px;
+      border-color: #dbd8d7;
+      padding: 24px;
+    }
+
+    textarea {
+      @include projectParagraph(15px, 20px, #3c3a39);
+
+      margin-top: 30px;
+      width: 100%;
+      height: 114px;
+      padding: 12px 20px;
+      box-sizing: border-box;
+      border: 2px none #ccc;
+      background-color: #fbf8f7;
+      resize: none;
+    }
+  }
+
+  form {
+    @include flexCenter;
+
+    width: 100%;
+
+    .btn-1 {
+      align-self: center;
+    }
+  }
+
+  @include desktopResolution {
+    display: grid;
+    align-items: baseline;
+    grid-template-columns: 40% 50%;
+    margin-top: 100px;
+    height: 500px;
+
+    header {
+      text-align: left;
+    }
+
+    fieldset {
+      padding: 0;
+    }
+
+    form {
+      .btn-1 {
+        align-self: baseline;
+      }
+    }
+  }
+}

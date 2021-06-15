@@ -1,0 +1,108 @@
+@use "../utils"as *;
+
+.start-screen {
+  nav {
+    @include flexCenter(row);
+
+    justify-content: space-between;
+    background-color: $color_back2;
+    height: 46px;
+    width: 100%;
+    position: fixed;
+
+    .logo {
+      @include robotoTitle(18px, 24px, $color_main_text);
+
+      text-decoration: none;
+      margin-left: 24px;
+      font-style: normal;
+      font-weight: bold;
+    }
+  }
+
+  .headline {
+    @extend %generalPadding;
+
+    @include flexCenter(column);
+
+    @include desktopResolution {
+      background-image: url(../../assets/large-background.png);
+    }
+
+    height: 650px;
+    background-color: $color_back1;
+    background-image: url(../../assets/Illustration.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+
+    h1 {
+      @include sectionTitle(56px, 64px, $color_main_orange);
+
+      @include desktopResolution {
+        @include sectionTitle(72px, 81px, $color_main_orange);
+      }
+    }
+
+    h2 {
+      @include robotoTitle(24px, 32px, #fff5e1);
+
+      @include desktopResolution {
+        @include robotoTitle(32px, 44px, $color_main_text);
+      }
+    }
+
+    p {
+      font-family: 'Poppins', sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 24px;
+      color: $color_main_text;
+
+      @include desktopResolution {
+        @include projectParagraph(20px, 32px, $color_main_text);
+      }
+    }
+
+    .contact-info {
+      @extend %generalPadding;
+
+      width: 100%;
+      margin-top: 24px;
+
+      ul {
+        @include flexCenter(row);
+
+        align-items: center;
+        justify-content: start;
+        gap: 12px;
+      }
+    }
+
+    @include desktopResolution {
+      @include flexCenter(row);
+
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      height: 800px;
+
+      .contact-info {
+        //width: max-content;
+        margin-right: 100px;
+        width: 100px;
+
+        ul {
+          flex-direction: column;
+        }
+      }
+
+      &-content {
+        @include flexCenter(column);
+
+        justify-content: center;
+        align-items: flex-start;
+        width: 50%;
+      }
+    }
+  }
+}

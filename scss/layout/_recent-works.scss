@@ -1,0 +1,173 @@
+@use "../utils"as *;
+
+.recent-works {
+  @include flexCenter;
+
+  & header {
+    h3 {
+      @include sectionTitle(40px, 52px, $color_main_black);
+
+      width: 100%;
+    }
+  }
+
+  hr {
+    width: 90%;
+    margin-top: 24px;
+    margin-bottom: 50px;
+    border: solid #212121;
+    border-width: 1px 0 0 0;
+  }
+
+  .works {
+    @include flexCenter;
+
+    gap: 50px;
+    list-style: none;
+
+    li {
+      margin: 0;
+    }
+
+    .desc-highligth {
+      @include flexCenter;
+
+      .text-highligth {
+        width: 100%;
+
+        #high-h3 {
+          @include sectionTitle(32px, 44px, $color_third_text);
+
+          margin: 24px;
+        }
+
+        #high-p {
+          @include projectParagraph;
+
+          margin: 24px;
+        }
+
+        .btn-1 {
+          margin: 24px;
+        }
+      }
+    }
+
+    .pl-categories-container {
+      @include flexCenter(row);
+
+      @extend %generalPadding;
+
+      justify-content: flex-start;
+      gap: 12px;
+      list-style: none;
+      margin-top: 24px;
+
+      .pl-block {
+        height: 40px;
+        padding: 10px 12px;
+        border: 1px solid #8993a4;
+        background: rgba(255, 255, 255, 0.24);
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 20px;
+      }
+    }
+
+    .card-works {
+      @include flexCenter;
+
+      h3 {
+        @extend %generalPadding;
+
+        color: $color_main_text;
+      }
+
+      align-items: flex-start;
+      justify-content: flex-end;
+
+      p {
+        @extend %generalPadding;
+
+        color: $color_main_text;
+      }
+
+      height: 380px;
+      color: $color_main_text;
+      background-image: url(../../assets/back-1.png);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: center;
+    }
+
+    @include desktopResolution {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      margin: 0 24px 24px 24px;
+
+      .desc-highligth {
+        @include flexCenter(row);
+
+        & img {
+          width: 684px;
+          height: 448px;
+        }
+
+        .text-highligth {
+          width: 100%;
+
+          #high-h3 {
+            @include sectionTitle(32px, 44px, $color_third_text);
+
+            margin: 24px;
+          }
+
+          #high-p {
+            @include projectParagraph;
+
+            margin: 24px;
+          }
+
+          .btn-1 {
+            margin: 24px;
+          }
+        }
+      }
+
+      .highligth {
+        grid-column: 1 / span 3;
+      }
+
+      .card-works {
+        margin: 0 auto 0 auto;
+        justify-content: flex-end;
+        align-items: baseline;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: scale 0.3s ease-in;
+
+        ul {
+          margin-bottom: 24px;
+        }
+
+        & button {
+          display: none;
+        }
+
+        &.no-content {
+          width: 100%;
+
+          button {
+            display: block;
+          }
+
+          header,
+          p,
+          ul {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
