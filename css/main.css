@@ -134,6 +134,24 @@
 .contact-me form .btn-1 {
   align-self: center;
 }
+@media only screen and (min-width: 992px) {
+  .contact-me {
+    display: grid;
+    align-items: baseline;
+    grid-template-columns: 40% 50%;
+    margin-top: 100px;
+    height: 500px;
+  }
+  .contact-me header {
+    text-align: left;
+  }
+  .contact-me fieldset {
+    padding: 0;
+  }
+  .contact-me form .btn-1 {
+    align-self: baseline;
+  }
+}
 
 footer {
   border-top: 1px solid #dbd8d7;
@@ -259,6 +277,7 @@ footer ul li:hover {
   .recent-works .works {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 24px 24px 24px;
   }
   .recent-works .works .desc-highligth {
     display: flex;
@@ -380,6 +399,10 @@ footer ul li:hover {
     align-items: baseline;
     grid-template-columns: 1fr 1fr 1fr;
     padding-top: 100px;
+  }
+  .skill-techs .tech-list,
+.skill-techs ul {
+    gap: 24px;
   }
 }
 

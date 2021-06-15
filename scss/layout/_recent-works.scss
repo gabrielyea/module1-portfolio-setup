@@ -103,6 +103,7 @@
     @include desktopResolution {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
+      margin: 0 24px 24px 24px;
 
       .desc-highligth {
         @include flexCenter(row);

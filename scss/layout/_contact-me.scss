@@ -51,4 +51,26 @@
       align-self: center;
     }
   }
+
+  @include desktopResolution {
+    display: grid;
+    align-items: baseline;
+    grid-template-columns: 40% 50%;
+    margin-top: 100px;
+    height: 500px;
+
+    header {
+      text-align: left;
+    }
+
+    fieldset {
+      padding: 0;
+    }
+
+    form {
+      .btn-1 {
+        align-self: baseline;
+      }
+    }
+  }
 }

@@ -43,5 +43,10 @@
     align-items: baseline;
     grid-template-columns: 1fr 1fr 1fr;
     padding-top: 100px;
+
+    .tech-list,
+    ul {
+      gap: 24px;
+    }
   }
 }
