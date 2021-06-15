@@ -374,6 +374,14 @@ footer ul li:hover {
   align-items: center;
   list-style: none;
 }
+@media only screen and (min-width: 992px) {
+  .skill-techs {
+    display: grid;
+    align-items: baseline;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 100px;
+  }
+}
 
 .start-screen nav {
   display: flex;

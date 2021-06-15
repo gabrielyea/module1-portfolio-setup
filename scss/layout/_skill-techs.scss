@@ -37,4 +37,11 @@
       list-style: none;
     }
   }
+
+  @include desktopResolution {
+    display: grid;
+    align-items: baseline;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 100px;
+  }
 }
