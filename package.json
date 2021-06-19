@@ -12,5 +12,8 @@
   },
   "dependencies": {
     "package.json": "^2.0.1"
+  },
+  "scripts": {
+    "watchsass":"sass --watch scss/main.scss:css/main.css"
   }
 }
