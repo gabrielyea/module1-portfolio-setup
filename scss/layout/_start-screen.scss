@@ -1,25 +1,6 @@
 @use "../utils"as *;
 
 .start-screen {
-  nav {
-    @include flexCenter(row);
-
-    justify-content: space-between;
-    background-color: $color_back2;
-    height: 46px;
-    width: 100%;
-    position: fixed;
-
-    .logo {
-      @include robotoTitle(18px, 24px, $color_main_text);
-
-      text-decoration: none;
-      margin-left: 24px;
-      font-style: normal;
-      font-weight: bold;
-    }
-  }
-
   .headline {
     @extend %generalPadding;
 
