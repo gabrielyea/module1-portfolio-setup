@@ -3,6 +3,14 @@
 nav {
   @include flexCenter(row);
 
+  a:hover {
+    animation: colorChange 0.5s forwards, textChange 0.5s forwards;
+  }
+
+  .mail-icon:hover {
+    animation: scaleUp 0.5s forwards;
+  }
+
   justify-content: space-between;
   background-color: $color_back2;
   height: 46px;
@@ -18,4 +26,20 @@ nav {
     font-style: normal;
     font-weight: bold;
   }
+
+  ul {
+    li {
+      &.on-view {
+        text-decoration: white underline 2px;
+
+        a {
+          animation: colorChange 0.5s forwards, textChange 0.5s forwards;
+        }
+      }
+    }
+  }
+
+  @include colorChangeAnimation("colorChange", $color_main_text, $color_main_orange);
+  @include scaleTextUpAnimation("textChange", 14px, 20px);
+  @include scaleChangeAnimation("scaleUp", 1, 1.2);
 }
