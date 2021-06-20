@@ -71,3 +71,15 @@
     }
   }
 }
+
+@mixin rotateAnimation($name, $from, $to) {
+  @keyframes #{$name} {
+    0% {
+      rotate: $from;
+    }
+
+    100% {
+      rotate: $to;
+    }
+  }
+}

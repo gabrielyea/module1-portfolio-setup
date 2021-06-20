@@ -66,12 +66,59 @@
 
 .menu-btn {
   margin-right: 36px;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  border: none;
-  cursor: pointer;
-  overflow: hidden;
-  outline: none;
+  width: 24px;
+  height: 24px;
+
+  .burguer {
+    position: absolute;
+    background-color: $color_main_text;
+    width: 28px;
+    height: 3px;
+    top: 20px;
+    transition: all 1s ease;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -8px;
+      width: 28px;
+      height: 3px;
+      background-color: $color_main_text;
+      transition: all 1s ease;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 8px;
+      width: 28px;
+      height: 3px;
+      background-color: $color_main_text;
+      transition: all 1s ease;
+    }
+  }
+
+  &.show {
+    .burguer {
+      background: transparent;
+      transform: rotate(360deg);
+
+      &::before {
+        transform: translate(0, 8px) rotate(45deg);
+      }
+
+      &::after {
+        transform: translate(0, -8px) rotate(-45deg);
+      }
+    }
+
+    // background-color: transparent;
+    // background-repeat: no-repeat;
+    // border: none;
+    // cursor: pointer;
+    // overflow: hidden;
+    // outline: none;
+  }
 
   @include desktopResolution {
     display: none;
