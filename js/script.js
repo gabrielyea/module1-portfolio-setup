@@ -17,20 +17,11 @@ const contactMe = document.getElementById('contact-me');
 // strangely sized sections or other stuff (insted of hardcoding the offsets).
 // It is also a little hard to read.
 const sectionRanges = {
-  s0: [
-    [clearSection.offsetTop, clearSection.offsetHeight + clearSection.offsetTop], null
-  ],
-  s1: [
-    [portfolio.offsetTop, portfolio.offsetHeight + portfolio.offsetTop], links[0]
-  ],
-  s2: [
-    [aboutMe.offsetTop, aboutMe.offsetHeight + aboutMe.offsetTop], links[1]
-  ],
-  s3: [
-    [aboutMe.offsetHeight + aboutMe.offsetTop,
-      contactMe.offsetHeight + contactMe.offsetTop
-    ], links[2]
-  ], // Manual offset required!!
+  s0: [[clearSection.offsetTop, clearSection.offsetHeight + clearSection.offsetTop], null],
+  s1: [[portfolio.offsetTop, portfolio.offsetHeight + portfolio.offsetTop], links[0]],
+  s2: [[aboutMe.offsetTop, aboutMe.offsetHeight + aboutMe.offsetTop], links[1]],
+  s3: [[aboutMe.offsetHeight + aboutMe.offsetTop,
+    contactMe.offsetHeight + contactMe.offsetTop], links[2]], // Manual offset required!!
 };
 
 let isMenuOpen = false;
