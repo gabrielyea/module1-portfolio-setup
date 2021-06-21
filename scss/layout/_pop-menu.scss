@@ -1,1 +1,45 @@
-@use "../utils" as *;
+@use "../utils"as *;
+
+@include growDownAnimation;
+
+.pop-menu {
+  display: none;
+  width: 100%;
+  height: 800px;
+  padding-top: 50px;
+  background-color: #3c3a39;
+  position: fixed;
+  z-index: 1;
+
+  &.show {
+    display: block;
+    animation: growDown 300ms ease-in-out;
+    transform-origin: top center;
+  }
+
+  ul {
+    @include flexCenter;
+
+    padding-top: 24px;
+    list-style: none;
+    gap: 24px;
+
+    li {
+      @extend %generalPadding;
+
+      font-family: 'Inter', sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 44px;
+      color: #fff5e1;
+      width: 95%;
+      border-bottom: #6f6c6b solid 1px;
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  }
+}

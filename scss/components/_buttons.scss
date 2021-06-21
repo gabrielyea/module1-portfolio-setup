@@ -11,16 +11,12 @@
   margin-top: 10px;
   align-self: flex-start;
   color: $color_main_text;
-  background-size: 100% 200%;
-  background-image: linear-gradient(to bottom, $color_main_orange 50%, #fff5e1 50%);
+  background-color: $color_main_orange;
   transition: all 0.1s ease-in;
 }
 
 .btn-1:hover {
-  color: $color_main_orange;
-  background-position: 0 -100%;
-  border: 1px solid $color_main_orange;
-  box-sizing: border-box;
+  @include hoverAnimation($color_main_orange);
 }
 
 .btn-1:active {
@@ -61,10 +57,6 @@
   transition: font-size 0.3s ease-in;
 }
 
-.page-links a:hover {
-  font-size: 18px;
-}
-
 .mail-icon {
   background-image: url(../assets/Icon-Mail.png);
   width: 22px;
@@ -74,12 +66,52 @@
 
 .menu-btn {
   margin-right: 36px;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  border: none;
-  cursor: pointer;
-  overflow: hidden;
-  outline: none;
+  width: 24px;
+  height: 24px;
+
+  .burguer {
+    position: absolute;
+    background-color: $color_main_text;
+    width: 28px;
+    height: 3px;
+    top: 20px;
+    transition: all 1s ease;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -8px;
+      width: 28px;
+      height: 3px;
+      background-color: $color_main_text;
+      transition: all 1s ease;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 8px;
+      width: 28px;
+      height: 3px;
+      background-color: $color_main_text;
+      transition: all 1s ease;
+    }
+  }
+
+  &.show {
+    .burguer {
+      background: transparent;
+      transform: rotate(360deg);
+
+      &::before {
+        transform: translate(0, 8px) rotate(45deg);
+      }
+
+      &::after {
+        transform: translate(0, -8px) rotate(-45deg);
+      }
+    }
+  }
 
   @include desktopResolution {
     display: none;

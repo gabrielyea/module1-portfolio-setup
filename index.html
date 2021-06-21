@@ -20,24 +20,32 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Crete+Round:wght@400;500;700&family=Poppins&familty=Inter:wght@500;700&family=Roboto:wght@400;500;700&display=swap&"
     rel="stylesheet">
-  <script src='main.js'></script>
 </head>
 
 <body>
   <header class="start-screen">
-    <nav>
-      <a class="logo" href="#">Logo</a>
-      <button class="menu-btn menu">
-        <img src="assets/Icon-Menu.png" alt="menu button">
-      </button>
-      <ul class="page-links" tabindex="0">
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#"><span class="mail-icon"></span></a></li>
+    <nav id="nav">
+      <a id="logo" class="logo" href="#">Logo</a>
+      <div id="burguer" class="menu-btn">
+        <span  class="burguer"></span>
+      </div>
+      <ul id="page-links" class="page-links" tabindex="0">
+        <li id="p-l"> <a class="on-view" href="#recent-works">Portfolio</a></li>
+        <li id="a-l"> <a href="#about-me-intro">About</a></li>
+        <li id="c-l"> <a href="#contact-me">Contact</a></li>
+        <li id="m-l"> <a href="#"><span class="mail-icon"></span></a></li>
       </ul>
     </nav>
-    <section class="headline">
+
+    <div id="pop-menu" class="pop-menu">
+      <ul id="pop-menu-links">
+        <li> <a href="#recent-works">Portfolio</a></li>
+        <li><a href="#about-me-intro">About</a></li>
+        <li><a href="#contact-me">Contact</a></li>
+      </ul>   
+    </div>
+
+    <section id="headline" class="headline">
       <div class="headline-content">
         <h1>Hey There.
           I’m Gabriel</h1>
@@ -60,7 +68,7 @@
     </section>
   </header>
 
-  <section class="recent-works">
+  <section  id="recent-works" class="recent-works">
     <header>
       <h3 id="work-title-h3" class="works-title"> My recent works </h3>
     </header>
@@ -232,7 +240,7 @@
     </ul>
   </section>
 
-  <section class="about-me-intro">
+  <section id="about-me-intro" class="about-me-intro">
     <div class="about-me-headline">
       <header>
         <h2 id="about-me-h2">
@@ -280,7 +288,7 @@
     </div>
   </section>
 
-  <section class="contact-me">
+  <section id="contact-me" class="contact-me">
     <header>
       <h3>
         I'm always interested in hearing about new projects,
@@ -308,6 +316,8 @@
       <li><a href="#"> <img src="assets/icon-twit-dark.png" alt="twitter logo"></a></li>
     </ul>
   </footer>
+
+  <script src='js/script.js'></script>
 </body>
 
 </html>
