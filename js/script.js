@@ -1,9 +1,20 @@
-const popMenu = document.getElementById('pop-menu');
-const burger = document.getElementById('burguer');
+const popMenu = document.getElementById("pop-menu");
+const burger = document.getElementById("burguer");
 
-burger.addEventListener('click', openMenu());
+let isMenuOpen = false;
+
+burger.addEventListener("click", () => {
+	if(isMenuOpen ? closeMenu() : openMenu());
+	isMenuOpen = !isMenuOpen;
+});
 
 function openMenu() {
-	popMenu.classList.add('show');
-	console.log("checking")
+  popMenu.classList.add("show");
+  burger.classList.add("show");
 }
+
+function closeMenu() {
+  popMenu.classList.remove("show");
+  burger.classList.remove("show");
+}
+
