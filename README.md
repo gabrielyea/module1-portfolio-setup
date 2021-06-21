@@ -6,9 +6,9 @@
 > The mobile page should be a clone of [this template](https://www.figma.com/file/l7SqJ3ZfkAKih9sFxvWSR4/Microverse-Student-Project-1?node-id=48%3A27)
 > The app is responsive for mobiles and standard PC screens.
 
-![screenshot](./desktop-screenshot.png)
-![screenshot](./skeleton-app.png)
-![screenshot](./screenshot-2.png)
+![screenshot](./misc/desktop-screenshot.png)
+![screenshot](./misc/skeleton-app.png)
+![screenshot](./misc/screenshot-2.png)
 
 
 <!--Additional description about the project and its features.-->
