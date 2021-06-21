@@ -563,6 +563,10 @@ footer ul li:hover {
   width: 95%;
   border-bottom: #6f6c6b solid 1px;
 }
+.pop-menu ul li a {
+  text-decoration: none;
+  color: inherit;
+}
 
 nav {
   display: flex;

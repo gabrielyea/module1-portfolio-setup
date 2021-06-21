@@ -35,6 +35,11 @@
       color: #fff5e1;
       width: 95%;
       border-bottom: #6f6c6b solid 1px;
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
     }
   }
 }

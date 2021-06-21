@@ -3,6 +3,7 @@ const popMenu = document.getElementById('pop-menu');
 const menuBtn = document.getElementById('burguer');
 const logoBtn = document.getElementById('logo');
 const pageLinks = document.getElementById('page-links');
+const popMenuLinksParent = document.getElementById('pop-menu-links');
 const links = pageLinks.children;
 
 // ----Sections----
@@ -16,11 +17,20 @@ const contactMe = document.getElementById('contact-me');
 // strangely sized sections or other stuff (insted of hardcoding the offsets).
 // It is also a little hard to read.
 const sectionRanges = {
-  s0: [[clearSection.offsetTop, clearSection.offsetHeight + clearSection.offsetTop], null],
-  s1: [[portfolio.offsetTop, portfolio.offsetHeight + portfolio.offsetTop], links[0]],
-  s2: [[aboutMe.offsetTop, aboutMe.offsetHeight + aboutMe.offsetTop], links[1]],
-  s3: [[aboutMe.offsetHeight + aboutMe.offsetTop,
-    contactMe.offsetHeight + contactMe.offsetTop], links[2]], // Manual offset required!!
+  s0: [
+    [clearSection.offsetTop, clearSection.offsetHeight + clearSection.offsetTop], null
+  ],
+  s1: [
+    [portfolio.offsetTop, portfolio.offsetHeight + portfolio.offsetTop], links[0]
+  ],
+  s2: [
+    [aboutMe.offsetTop, aboutMe.offsetHeight + aboutMe.offsetTop], links[1]
+  ],
+  s3: [
+    [aboutMe.offsetHeight + aboutMe.offsetTop,
+      contactMe.offsetHeight + contactMe.offsetTop
+    ], links[2]
+  ], // Manual offset required!!
 };
 
 let isMenuOpen = false;
@@ -86,4 +96,10 @@ menuBtn.addEventListener('click', () => {
 
 window.addEventListener('scroll', () => {
   checkRangeScrollFocus(this.scrollY);
+});
+
+popMenuLinksParent.addEventListener('click', (e) => {
+  if (e.target && e.target.nodeName === 'A') {
+    closeMenu();
+  }
 });
