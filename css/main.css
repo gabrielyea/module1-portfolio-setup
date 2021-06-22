@@ -631,6 +631,9 @@ nav ul li.on-view a {
 }
 
 .pop-project {
+  display: none;
+}
+.pop-project.show {
   display: flex;
   flex-direction: column;
   justify-content: center;

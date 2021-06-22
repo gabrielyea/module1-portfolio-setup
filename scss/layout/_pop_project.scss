@@ -1,7 +1,11 @@
 @use "../utils"as *;
 
 .pop-project {
-  @include flexCenter;
+  display: none;
+
+  &.show {
+    @include flexCenter;
+  }
 
   header {
     width: 100%;

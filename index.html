@@ -73,7 +73,7 @@
       <h3 id="work-title-h3" class="works-title"> My recent works </h3>
     </header>
     <hr>
-    <ul class="works">
+    <ul id="projects-list" class="works">
       <li class="highligth">
         <div class="project-highligth">
           <div class="desc-highligth">
@@ -128,7 +128,7 @@
         <button class="btn-1 large-btn">See Project</button>
       </li>
 
-      <li class="card-works back1 dark">
+      <li id="project-card" class="card-works  dark">
         <header class="padded-content">
           <h3>Data Dashboard Healthcare</h3>
         </header>
@@ -150,93 +150,6 @@
         <button class="btn-1 large-btn">See Project</button>
       </li>
 
-      <li class="card-works dark">
-        <header class="padded-content">
-          <h3>Website Portfolio</h3>
-        </header>
-        <p class="padded-content">
-          A daily selection of privately personalized reads;
-          no accounts or sign-ups required. has been the industry's standard
-        </p>
-        <ul class="pl-categories-container padded-content">
-          <li class="pl-block dark">
-            html
-          </li>
-          <li class="pl-block dark">
-            bootstrap
-          </li>
-          <li class="pl-block dark">
-            Ruby
-          </li>
-        </ul>
-        <button class="btn-1 large-btn">See Project</button>
-      </li>
-
-      <li class="card-works back1 dark">
-        <header class="padded-content">
-          <h3>Profesional Art Printing Data</h3>
-        </header>
-        <p class="padded-content">
-          A daily selection of privately personalized reads;
-          no accounts or sign-ups required. has been the industry's standard
-        </p>
-        <ul class="pl-categories-container padded-content">
-          <li class="pl-block dark">
-            html
-          </li>
-          <li class="pl-block dark">
-            bootstrap
-          </li>
-          <li class="pl-block dark">
-            Ruby
-          </li>
-        </ul>
-        <button class="btn-1 large-btn">See Project</button>
-      </li>
-
-      <li class="card-works back2 dark">
-        <header class="padded-content">
-          <h3>Profesional Art Printing Data</h3>
-        </header>
-        <p class="padded-content">
-          A daily selection of privately personalized reads;
-          no accounts or sign-ups required. has been the industry's standard
-        </p>
-        <ul class="pl-categories-container padded-content">
-          <li class="pl-block dark">
-            html
-          </li>
-          <li class="pl-block dark">
-            bootstrap
-          </li>
-          <li class="pl-block dark">
-            Ruby
-          </li>
-        </ul>
-        <button class="btn-1 large-btn">See Project</button>
-      </li>
-
-      <li class="card-works back1 dark">
-        <header class="padded-content">
-          <h3>Profesional Art Printing Data</h3>
-        </header>
-        <p class="padded-content">
-          A daily selection of privately personalized reads;
-          no accounts or sign-ups required. has been the industry's standard
-        </p>
-        <ul class="pl-categories-container padded-content">
-          <li class="pl-block dark">
-            html
-          </li>
-          <li class="pl-block dark">
-            bootstrap
-          </li>
-          <li class="pl-block dark">
-            Ruby
-          </li>
-        </ul>
-        <button class="btn-1 large-btn">See Project</button>
-      </li>
     </ul>
   </section>
 
@@ -307,13 +220,13 @@
     </form>
   </section>
 
-  <section class="pop-project">
+  <section id="pop-project" class="pop-project">
     <div class="pop-project-display">
-      <button class="btn-exit"><em class="btn-icon"></em></button>
+      <button id="pop-project-exit" class="btn-exit"><em class="btn-icon"></em></button>
       <header>
-        <h2 class="pop-project-title">Placheloder title</h2>
-        <ul class="pl-categories-container">
-          <li class="pl-block dark">
+        <h2 id="pop-project-title" class="pop-project-title">Placheloder title</h2>
+        <ul id="techs" class="pl-categories-container">
+          <!-- <li class="pl-block dark">
             html
           </li>
           <li class="pl-block dark">
@@ -321,13 +234,13 @@
           </li>
           <li class="pl-block dark">
             Ruby
-          </li>
+          </li> -->
         </ul>
       </header>
       <div class="pop-project-content">
-        <img src="./assets/Img-Placeholder-5.png" alt="Project thumbnail">
+        <img id="project-image" src="./assets/Img-Placeholder-5.png" alt="Project thumbnail">
         <div class="text-container">
-          <p>
+          <p id="project-desc">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
             industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
             scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -335,8 +248,8 @@
             galley of type and scrambled it 1960s with the releax map lapora verita.
           </p>
           <ul class="btn-list">
-            <li><button class="btn-1">See Live<em class="btn-icon"></em></button></li>
-            <li><button class="btn-1">See Source<em class="btn-icon"></em></button></li>
+            <li><a id="live-link" class="btn-1">See Live<em class="btn-icon"></em></a></li>
+            <li><a id="source-link" class="btn-1">See Source<em class="btn-icon"></em></a></li>
           </ul>
         </div>
       </div>
