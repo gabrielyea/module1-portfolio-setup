@@ -1,0 +1,22 @@
+@use "../utils"as *;
+
+.pop-project {
+  @include flexCenter;
+
+  &-display {
+    position: fixed;
+    z-index: 1;
+    width: 1000px;
+    height: 600px;
+    background-color: $color_main_text;
+    top: 25%;
+  }
+
+  &-title {
+    @include flexCenter;
+  }
+
+  &-content {
+    @include flexCenter;
+  }
+}
