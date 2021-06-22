@@ -4,7 +4,7 @@
   padding: 0;
 }
 
-.pop-menu ul li, .start-screen .headline, .start-screen .headline .contact-info, .recent-works .works .pl-categories-container, .recent-works .works .card-works h3, .recent-works .works .card-works p, .contact-me header, .contact-me fieldset, .about-me-intro .about-me-headline {
+.pop-menu ul li, .start-screen .headline, .start-screen .headline .contact-info, .recent-works .works .card-works h3, .recent-works .works .card-works p, .pl-categories-container, .contact-me header, .contact-me fieldset, .about-me-intro .about-me-headline {
   padding-left: 24px;
   padding-right: 24px;
 }
@@ -235,25 +235,6 @@ footer ul li:hover {
 .recent-works .works .desc-highligth .text-highligth .btn-1 {
   margin: 24px;
 }
-.recent-works .works .pl-categories-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 12px;
-  list-style: none;
-  margin-top: 24px;
-}
-.recent-works .works .pl-categories-container .pl-block {
-  height: 40px;
-  padding: 10px 12px;
-  border: 1px solid #8993a4;
-  background: rgba(255, 255, 255, 0.24);
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 20px;
-}
 .recent-works .works .card-works {
   display: flex;
   flex-direction: column;
@@ -342,6 +323,26 @@ footer ul li:hover {
 .recent-works .works .card-works.no-content ul {
     display: none;
   }
+}
+
+.pl-categories-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  list-style: none;
+  margin-top: 24px;
+}
+.pl-categories-container .pl-block {
+  height: 40px;
+  padding: 10px 12px;
+  border: 1px solid #8993a4;
+  background: rgba(255, 255, 255, 0.24);
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .skill-techs {
@@ -635,25 +636,82 @@ nav ul li.on-view a {
   justify-content: center;
   align-items: center;
 }
+.pop-project header {
+  width: 100%;
+}
+.pop-project img {
+  width: 659px;
+  height: 448px;
+  flex-basis: 60%;
+}
 .pop-project-display {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   z-index: 1;
   width: 1000px;
   height: 600px;
   background-color: white;
-  top: 25%;
+  top: 15%;
+  padding: 24px;
+  gap: 24px;
 }
 .pop-project-title {
+  font-family: "Crete Round", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 44px;
+  color: #172b4d;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 .pop-project-content {
   display: flex;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+  color: #344563;
+  gap: 24px;
+}
+.pop-project .btn-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+.pop-project .text-container {
+  display: flex;
+  flex: 1;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+}
+.pop-project .btn-icon {
+  background-image: url("/assets/Icon-GitHub.png");
+  vertical-align: middle;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+.pop-project .btn-exit {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.pop-project .btn-exit .btn-icon {
+  background-image: url("/assets/Icon-GitHub.png");
+  vertical-align: middle;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+.pop-project .pl-categories-container {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
 }
 
 .btn-1 {

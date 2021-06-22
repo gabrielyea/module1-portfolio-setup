@@ -54,27 +54,6 @@
       }
     }
 
-    .pl-categories-container {
-      @include flexCenter(row);
-
-      @extend %generalPadding;
-
-      justify-content: flex-start;
-      gap: 12px;
-      list-style: none;
-      margin-top: 24px;
-
-      .pl-block {
-        height: 40px;
-        padding: 10px 12px;
-        border: 1px solid #8993a4;
-        background: rgba(255, 255, 255, 0.24);
-        font-weight: 500;
-        font-size: 15px;
-        line-height: 20px;
-      }
-    }
-
     .card-works {
       @include flexCenter;
 
@@ -170,5 +149,26 @@
         }
       }
     }
+  }
+}
+
+.pl-categories-container {
+  @include flexCenter(row);
+
+  @extend %generalPadding;
+
+  justify-content: flex-start;
+  gap: 12px;
+  list-style: none;
+  margin-top: 24px;
+
+  .pl-block {
+    height: 40px;
+    padding: 10px 12px;
+    border: 1px solid #8993a4;
+    background: rgba(255, 255, 255, 0.24);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
   }
 }

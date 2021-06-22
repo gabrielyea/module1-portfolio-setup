@@ -3,20 +3,77 @@
 .pop-project {
   @include flexCenter;
 
+  header {
+    width: 100%;
+  }
+
+  img {
+    width: 659px;
+    height: 448px;
+    flex-basis: 60%;
+  }
+
   &-display {
+    @include flexCenter;
+
     position: fixed;
     z-index: 1;
     width: 1000px;
     height: 600px;
     background-color: $color_main_text;
-    top: 25%;
+    top: 15%;
+    padding: 24px;
+    gap: 24px;
   }
 
   &-title {
-    @include flexCenter;
+    @include sectionTitle(32px, 44px, #172b4d);
+
+    display: flex;
   }
 
   &-content {
-    @include flexCenter;
+    display: flex;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 30px;
+    color: #344563;
+    gap: 24px;
+  }
+
+  .btn-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .text-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .btn-icon {
+    @include customButtonIcon("/assets/Icon-GitHub.png", 24px, 24px);
+  }
+
+  .btn-exit {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    .btn-icon {
+      @include customButtonIcon("/assets/Icon-GitHub.png", 24px, 24px);
+    }
+  }
+
+  .pl-categories-container {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
   }
 }

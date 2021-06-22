@@ -2,19 +2,19 @@
 <html lang="en">
 
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2EG6WRVQ5B"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
-  
-      gtag('config', 'G-2EG6WRVQ5B');
-    </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2EG6WRVQ5B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-2EG6WRVQ5B');
+  </script>
   <meta charset='utf-8'>
-  <meta http-equiv='X-UA-Compatible' content='IE=edge' >
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
   <title>My Web Developer Portfolio</title>
-  <meta name='viewport' content='width=device-width, initial-scale=1' >
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
   <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link
@@ -27,7 +27,7 @@
     <nav id="nav">
       <a id="logo" class="logo" href="#">Logo</a>
       <div id="burguer" class="menu-btn">
-        <span  class="burguer"></span>
+        <span class="burguer"></span>
       </div>
       <ul id="page-links" class="page-links" tabindex="0">
         <li id="p-l"> <a class="on-view" href="#recent-works">Portfolio</a></li>
@@ -42,7 +42,7 @@
         <li> <a href="#recent-works">Portfolio</a></li>
         <li><a href="#about-me-intro">About</a></li>
         <li><a href="#contact-me">Contact</a></li>
-      </ul>   
+      </ul>
     </div>
 
     <section id="headline" class="headline">
@@ -68,7 +68,7 @@
     </section>
   </header>
 
-  <section  id="recent-works" class="recent-works">
+  <section id="recent-works" class="recent-works">
     <header>
       <h3 id="work-title-h3" class="works-title"> My recent works </h3>
     </header>
@@ -297,14 +297,51 @@
     </header>
     <form action="https://formspree.io/f/mbjqyrqj" method="POST">
       <fieldset tabindex="0">
-        <input class="tab" oninvalid="setCustomValidity('Please enter your full name')" type="text" name="name" id="fullname"
-          required maxlength="30" placeholder="Full name">
+        <input class="tab" oninvalid="setCustomValidity('Please enter your full name')" type="text" name="name"
+          id="fullname" required maxlength="30" placeholder="Full name">
         <input type="email" name="_replyto" oninvalid="setCustomValidity('Please enter a valid email')" id="email"
           required placeholder="Email address">
         <textarea name="tarea" required maxlength="500" placeholder="Enter text here"></textarea>
       </fieldset>
       <button type="submit" class="btn-1">Get in touch</button>
     </form>
+  </section>
+
+  <section class="pop-project">
+    <div class="pop-project-display">
+      <button class="btn-exit"><em class="btn-icon"></em></button>
+      <header>
+        <h2 class="pop-project-title">Placheloder title</h2>
+        <ul class="pl-categories-container">
+          <li class="pl-block dark">
+            html
+          </li>
+          <li class="pl-block dark">
+            bootstrap
+          </li>
+          <li class="pl-block dark">
+            Ruby
+          </li>
+        </ul>
+      </header>
+      <div class="pop-project-content">
+        <img src="./assets/Img-Placeholder-5.png" alt="Project thumbnail">
+        <div class="text-container">
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+            galley of type and scrambled it 1960s with the releax map lapora verita.
+          </p>
+          <ul class="btn-list">
+            <li><button class="btn-1">See Live<em class="btn-icon"></em></button></li>
+            <li><button class="btn-1">See Source<em class="btn-icon"></em></button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
   </section>
 
   <footer class="contact-info">
@@ -317,9 +354,6 @@
     </ul>
   </footer>
 
-  <secion class="pop-project">
-    <div class="pop-project-display"></div>
-  </secion>
   <script type="module" src='scripts/main.js'></script>
 </body>
 
