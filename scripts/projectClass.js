@@ -30,7 +30,7 @@ export default class Project {
 
 // const projectsData = [
 //   new Project('Project 1',
-//     'He was so preoccupied with whether or not he could that 
+//     'He was so preoccupied with whether or not he could that
 // he failed to stop to consider if he should.',
 //     'none',
 //     [
