@@ -79,7 +79,7 @@ export const projectsData = [
   new Project('4',
     'Project 5',
     'He was so preoccupied with whether or not he could thathe failed to stop to consider if he should. He took one look at what was under the table and noped the hell out of there.',
-    'assets/Img-Placeholder-4.png',
+    './assets/Img-Placeholder-4.png',
     [
       'html',
       'javascript',
@@ -100,7 +100,7 @@ export const projectsData = [
   new Project('6',
     'Project 7',
     'He was so preoccupied with whether or not he could thathe failed to stop to consider if he should. He took one look at what was under the table and noped the hell out of there.',
-    'assets/Img-Placeholder-4.png',
+    './assets/Img-Placeholder-4.png',
     [
       'javascript',
       'Bootstrap',
