@@ -108,6 +108,10 @@
     }
   }
 
+  a {
+    text-decoration: none;
+  }
+
   #live-link {
     .btn-icon {
       @include customButtonIcon("../assets/Icon-LiveLink.png", 24px, 24px);

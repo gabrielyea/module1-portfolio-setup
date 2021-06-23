@@ -739,6 +739,9 @@ nav ul li.on-view a {
   background-repeat: no-repeat;
   margin-left: 10px;
 }
+.pop-project a {
+  text-decoration: none;
+}
 .pop-project #live-link .btn-icon {
   background-image: url("../assets/Icon-LiveLink.png");
   vertical-align: bottom;
