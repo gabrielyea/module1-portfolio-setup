@@ -17,7 +17,7 @@ const createSpecialProject = () => {
   clone.querySelector('#high-h3').innerText = 'Whatever';
   clone.querySelector('#high-p').innerText = 'Trial';
   mainProjectsTarget.appendChild(clone);
-}
+};
 
 const setProjectsUp = () => {
   // sets project data and events
