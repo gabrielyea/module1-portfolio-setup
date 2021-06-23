@@ -60,17 +60,17 @@ export default class ProjectPopUp {
   toggleBlur = () => {
     // this should be a loop... lazy :C
     if (this.isPopClose) {
-    //   this.headline.classList.add('blur');
-    //   this.recentWorks.classList.add('blur');
-    //   this.aboutMe.classList.add('blur');
-    //   this.skillTechs.classList.add('blur');
-    //   this.contactMe.classList.add('blur');
-    // } else {
-    //   this.headline.classList.remove('blur');
-    //   this.recentWorks.classList.remove('blur');
-    //   this.aboutMe.classList.remove('blur');
-    //   this.skillTechs.classList.remove('blur');
-    //   this.contactMe.classList.remove('blur');
+      this.headline.classList.add('blur');
+      this.recentWorks.classList.add('blur');
+      this.aboutMe.classList.add('blur');
+      this.skillTechs.classList.add('blur');
+      this.contactMe.classList.add('blur');
+    } else {
+      this.headline.classList.remove('blur');
+      this.recentWorks.classList.remove('blur');
+      this.aboutMe.classList.remove('blur');
+      this.skillTechs.classList.remove('blur');
+      this.contactMe.classList.remove('blur');
     }
     this.isPopClose = !this.isPopClose;
   }
