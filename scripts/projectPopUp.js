@@ -7,7 +7,7 @@ export default class ProjectPopUp {
 
   techs = document.getElementById('techs');
 
-  projectImg = document.getElementById('project-img');
+  projectImg = document.getElementById('project-image');
 
   projectDesc = document.getElementById('pop-project-desc');
 
@@ -26,11 +26,31 @@ export default class ProjectPopUp {
   addTech = (tech) => {
     this.techs.appendChild(tech);
   }
-  // setTechs = (techs) => {
 
-  // }
+  setProjectImage = (path) => {
+    this.projectImg.src = path;
+  }
 
-  // set current = (desc) => {
-  //   this.projectDesc.innerText = desc;
-  // }
+  closePopUp = () => {
+    this.removeChilds(this.techs);
+    this.mainDisplay.classList.remove('show');
+  }
+
+  removeChilds = (parent) => {
+    while (parent.lastChild) {
+      parent.removeChild(parent.lastChild);
+    }
+  };
 }
+
+const myPop = new ProjectPopUp();
+myPop.exitBtn.onclick = () => {
+  myPop.closePopUp();
+};
+
+// myPop.mainDisplay.onclick = (e) => {
+//   console.log(e.target, myPop.mainDisplay)
+//   if (e.target.parent !== myPop.mainDisplay) {
+//     myPop.closePopUp();
+//   }
+// };

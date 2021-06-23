@@ -36,7 +36,7 @@ export const projectsData = [
   new Project('0',
     'Project 1',
     'He was so preoccupied with whether or not he could thathe failed to stop to consider if he should.',
-    'none',
+    '../assets/Img-Placeholder-6.png',
     [
       'ruby',
       'javascript',
@@ -47,8 +47,8 @@ export const projectsData = [
     'link2'),
   new Project('1',
     'Project 2',
-    'He was so preoccupied with whether or not he could thathe failed to stop to consider if he should.',
-    'none',
+    'Sometimes I stare at a door or a wall and I wonder what is this reality, why am I alive, and what is this all about?.',
+    '../assets/Img-Placeholder-4.png',
     [
       'ruby',
       'javascript',
@@ -57,8 +57,8 @@ export const projectsData = [
     'link2'),
   new Project('2',
     'Project 3',
-    'He was so preoccupied with whether or not he could thathe failed to stop to consider if he should.',
-    'none',
+    'Its much more difficult to play tennis with a bowling ball than it is to bowl with a tennis ball.',
+    '../assets/Img-Placeholder-5.png',
     [
       'Bootstrap',
       'javascript',
@@ -68,8 +68,8 @@ export const projectsData = [
     'link2'),
   new Project('3',
     'Project 4',
-    'He was so preoccupied with whether or not he could thathe failed to stop to consider if he should.',
-    'none',
+    'Culpa velit anim dolor cupidatat qui fugiat commodo commodo adipisicing ad ut ut eiusmod nisi. Quis exercitation amet ex exercitation velit qui est deserunt. Nisi elit quis commodo do veniam. Excepteur elit consequat minim ea consequat cillum irure cillum nisi elit eiusmod. Non eiusmod officia culpa culpa nulla mollit occaecat ut cupidatat amet exercitation nostrud labore dolor. Lorem laborum reprehenderit esse do anim.',
+    '../assets/Img-Placeholder-6.png',
     [
       'html',
       'javascript',
@@ -78,8 +78,8 @@ export const projectsData = [
     'link2'),
   new Project('4',
     'Project 5',
-    'He was so preoccupied with whether or not he could thathe failed to stop to consider if he should.',
-    'none',
+    'He was so preoccupied with whether or not he could thathe failed to stop to consider if he should. He took one look at what was under the table and noped the hell out of there.',
+    '../assets/Img-Placeholder-4.png',
     [
       'html',
       'javascript',
@@ -97,6 +97,7 @@ const createTech = (techName) => {
 };
 
 export const setProjectData = (emptyProject, projectIndex) => {
+  emptyProject.style.backgroundImage = `url(${projectsData[projectIndex].projectImage})`;
   emptyProject.querySelector('#project-title').innerText = projectsData[projectIndex].name;
   emptyProject.querySelector('#project-desc').innerText = projectsData[projectIndex].description;
   emptyProject.id = `project-card-${projectIndex}`;
@@ -112,6 +113,7 @@ export const displayPopProject = (popWindowRef, selectedProject) => {
   popWindowRef.mainDisplay.classList.add('show');
   popWindowRef.setTitle(pTitle);
   popWindowRef.setDescription(selectedProject.querySelector('#project-desc').innerText);
+  popWindowRef.setProjectImage(currentPro.projectImage);
   currentPro.technologies.forEach((tech) => {
     popWindowRef.addTech(createTech(tech));
   });

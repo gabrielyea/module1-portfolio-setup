@@ -244,7 +244,7 @@ footer ul li:hover {
   justify-content: flex-end;
   height: 380px;
   color: white;
-  background-image: url(../assets/back-1.png);
+  background-image: url(../assets/Img-Placeholder-4.png);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
@@ -632,12 +632,15 @@ nav ul li.on-view a {
 
 .pop-project {
   display: none;
+  z-index: 2;
 }
 .pop-project.show {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 2;
+  animation: fadeIn 0.5s ease-in-out;
 }
 .pop-project header {
   width: 100%;
