@@ -9,7 +9,7 @@ export default class ProjectPopUp {
 
   projectImg = document.getElementById('project-img');
 
-  projectDesc = document.getElementById('project-desc');
+  projectDesc = document.getElementById('pop-project-desc');
 
   liveLink = document.getElementById('like-link');
 
@@ -24,7 +24,6 @@ export default class ProjectPopUp {
   }
 
   addTech = (tech) => {
-    console.log(tech);
     this.techs.appendChild(tech);
   }
   // setTechs = (techs) => {
