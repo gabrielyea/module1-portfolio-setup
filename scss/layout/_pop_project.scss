@@ -104,19 +104,19 @@
     border: none;
 
     .btn-icon {
-      @include customButtonIcon("/assets/Icon-Exit.png", 24px, 24px);
+      @include customButtonIcon("../assets/Icon-Exit.png", 24px, 24px);
     }
   }
 
   #live-link {
     .btn-icon {
-      @include customButtonIcon("/assets/Icon-LiveLink.png", 24px, 24px);
+      @include customButtonIcon("../assets/Icon-LiveLink.png", 24px, 24px);
     }
   }
 
   #source-link {
     .btn-icon {
-      @include customButtonIcon("/assets/Icon-GitHub.png", 24px, 24px);
+      @include customButtonIcon("../assets/Icon-GitHub.png", 24px, 24px);
     }
   }
 
