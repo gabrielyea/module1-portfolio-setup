@@ -720,6 +720,10 @@ nav ul li.on-view a {
   font-family: "Poppins", sans-serif;
 }
 
+.blur {
+  filter: blur(8px);
+}
+
 .btn-1 {
   padding: 12px;
   font-size: 17px;
