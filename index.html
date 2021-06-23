@@ -128,27 +128,21 @@
         <button class="btn-1 large-btn">See Project</button>
       </li>
 
-      <li id="project-card" class="card-works  dark">
-        <header class="padded-content">
-          <h3>Data Dashboard Healthcare</h3>
-        </header>
-        <p class="padded-content">
-          A daily selection of privately personalized reads;
-          no accounts or sign-ups required. has been the industry's standard
-        </p>
-        <ul class="pl-categories-container padded-content">
-          <li class="pl-block dark">
-            html
-          </li>
-          <li class="pl-block dark">
-            bootstrap
-          </li>
-          <li class="pl-block dark">
-            Ruby
-          </li>
-        </ul>
-        <button class="btn-1 large-btn">See Project</button>
-      </li>
+      <template id="template">
+        <li id="project-card" class="card-works  dark">
+          <header class="padded-content">
+            <h3 id="project-title">Data Dashboard Healthcare</h3>
+          </header>
+          <p id="project-desc" class="padded-content">
+            A daily selection of privately personalized reads;
+            no accounts or sign-ups required. has been the industry's standard
+          </p>
+          <ul id="project-techs" class="pl-categories-container padded-content">
+          </ul>
+          <button class="btn-1 large-btn">See Project</button>
+        </li>
+      </template>
+
 
     </ul>
   </section>

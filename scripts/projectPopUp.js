@@ -14,4 +14,24 @@ export default class ProjectPopUp {
   liveLink = document.getElementById('like-link');
 
   sourceLink = document.getElementById('source-link');
+
+  setTitle = (title) => {
+    this.projectTitle.innerText = title;
+  }
+
+  setDescription = (desc) => {
+    this.projectDesc.innerText = desc;
+  }
+
+  addTech = (tech) => {
+    console.log(tech);
+    this.techs.appendChild(tech);
+  }
+  // setTechs = (techs) => {
+
+  // }
+
+  // set current = (desc) => {
+  //   this.projectDesc.innerText = desc;
+  // }
 }
