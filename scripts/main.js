@@ -11,38 +11,50 @@ const projectPopUp = new ProjectPopUp();
 const mainProjectsTarget = document.getElementById('projects-list');
 const base = document.getElementById('template');
 
-const init = () => {
-  for (let index = 0; index < 5; index += 1) {
+// sets project data and events
+const setProjectsUp = () => {
+  for (let index = 0; index < 6; index += 1) {
     const clone = base.content.firstElementChild.cloneNode(true);
+    const filledProject = ProjectData.setProjectData(clone, index);
     // Inits and fills projects on page
-    mainProjectsTarget.appendChild(ProjectData.setProjectData(clone, index))
-      .addEventListener('click', (source) => {
-        // Display projects opens the pop up, maby it should be in its own class
-        // but already had the methods on ProjectData, better design needed!!
-        ProjectData.displayPopProject(projectPopUp, source.target);
-        projectPopUp.toggleBlur();
-      });
+    mainProjectsTarget.appendChild(filledProject);
+    filledProject.querySelector('.btn-1').addEventListener('click', () => {
+      ProjectData.displayPopProject(projectPopUp, filledProject);
+      projectPopUp.toggleBlur();
+    });
+
+    // .querySelector('.btn-1').addEventListener('click', (source) => {
+    //   // Display projects opens the pop up, maby it should be in its own class
+    //   // but already had the methods on ProjectData, better design needed!!
+    //   ProjectData.displayPopProject(projectPopUp, source.target);
+    //   projectPopUp.toggleBlur();
+    // });
   }
-
-  // ------ Events ------
-  mobileMenu.menuBtn.addEventListener('click', () => {
-    if (mobileMenu.isMenuOpen ? mobileMenu.closeMenu() : mobileMenu.openMenu());
-    mobileMenu.isMenuOpen = !mobileMenu.isMenuOpen;
-  });
-
-  mobileMenu.popMenuLinksParent.addEventListener('click', (e) => {
-    if (e.target && e.target.nodeName === 'A') {
-      mobileMenu.closeMenu();
-    }
-  });
-
-  window.addEventListener('scroll', () => {
-    scrollFocus.checkRangeScrollFocus(window.scrollY);
-  });
-
-  projectPopUp.exitBtn.addEventListener(('click'), () => {
-    projectPopUp.closePopUp();
-  });
 };
+
+// This will be called on load
+const init = () => {
+  setProjectsUp();
+};
+
+// ------ Events ------
+mobileMenu.menuBtn.addEventListener('click', () => {
+  if (mobileMenu.isMenuOpen ? mobileMenu.closeMenu() : mobileMenu.openMenu());
+  mobileMenu.isMenuOpen = !mobileMenu.isMenuOpen;
+});
+
+mobileMenu.popMenuLinksParent.addEventListener('click', (e) => {
+  if (e.target && e.target.nodeName === 'A') {
+    mobileMenu.closeMenu();
+  }
+});
+
+window.addEventListener('scroll', () => {
+  scrollFocus.checkRangeScrollFocus(window.scrollY);
+});
+
+projectPopUp.exitBtn.addEventListener(('click'), () => {
+  projectPopUp.closePopUp();
+});
 
 window.addEventListener('load', init());

@@ -14,13 +14,21 @@
   }
 
   header {
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    gap: 24px;
   }
 
   img {
-    width: 659px;
-    height: 448px;
-    flex-basis: 60%;
+    @include desktopResolution {
+      width: 659px;
+      height: 448px;
+      flex-basis: 60%;
+    }
+
+    width: 100%;
+    height: 50%;
   }
 
   &-display {
@@ -28,12 +36,22 @@
 
     position: fixed;
     z-index: 1;
-    width: 1000px;
-    height: 600px;
     background-color: $color_main_text;
-    top: 15%;
-    padding: 24px;
     gap: 24px;
+
+    @include desktopResolution {
+      justify-content: center;
+      width: 1000px;
+      height: 600px;
+      top: 15%;
+      padding: 24px;
+    }
+
+    justify-content: flex-start;
+    height: 85%;
+    top: 10%;
+    width: 90%;
+    padding: 10px;
   }
 
   &-title {
@@ -44,13 +62,18 @@
 
   &-content {
     display: flex;
+    flex-direction: column;
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
-    line-height: 30px;
     color: #344563;
     gap: 24px;
+
+    @include desktopResolution {
+      font-size: 16px;
+      line-height: 30px;
+      flex-direction: row;
+    }
   }
 
   .btn-list {
@@ -62,20 +85,36 @@
 
   .text-container {
     display: flex;
-    flex: 1;
-    flex-direction: column;
-    justify-content: space-between;
-  }
 
-  .btn-icon {
-    @include customButtonIcon("/assets/Icon-GitHub.png", 24px, 24px);
+    @include desktopResolution {
+      flex: 1;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 98%;
+    }
+
+    flex-direction: column;
+    gap: 24px;
   }
 
   .btn-exit {
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 20px;
+    top: 20px;
+    border: none;
 
+    .btn-icon {
+      @include customButtonIcon("/assets/Icon-Exit.png", 24px, 24px);
+    }
+  }
+
+  #live-link {
+    .btn-icon {
+      @include customButtonIcon("/assets/Icon-LiveLink.png", 24px, 24px);
+    }
+  }
+
+  #source-link {
     .btn-icon {
       @include customButtonIcon("/assets/Icon-GitHub.png", 24px, 24px);
     }
@@ -85,6 +124,7 @@
     padding: 0;
     margin: 0;
     font-family: 'Poppins', sans-serif;
+    flex-wrap: wrap;
   }
 }
 
