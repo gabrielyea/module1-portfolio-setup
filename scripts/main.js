@@ -37,6 +37,8 @@ const init = () => {
   setProjectsUp();
 };
 
+init();
+
 // ------ Events ------
 mobileMenu.menuBtn.addEventListener('click', () => {
   if (mobileMenu.isMenuOpen ? mobileMenu.closeMenu() : mobileMenu.openMenu());
@@ -57,4 +59,4 @@ projectPopUp.exitBtn.addEventListener(('click'), () => {
   projectPopUp.closePopUp();
 });
 
-window.addEventListener('load', init());
+// window.addEventListener('load', init());
