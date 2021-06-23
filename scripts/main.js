@@ -9,7 +9,15 @@ const projectPopUp = new ProjectPopUp();
 
 // Template and target for clone
 const mainProjectsTarget = document.getElementById('projects-list');
-const base = document.getElementById('template');
+const base = document.getElementById('template-1');
+const specialProject = document.getElementById('template-2');
+
+const createSpecialProject = () => {
+  const clone = specialProject.content.firstElementChild.cloneNode(true);
+  clone.querySelector('#high-h3').innerText = 'Whatever';
+  clone.querySelector('#high-p').innerText = 'Trial';
+  mainProjectsTarget.appendChild(clone);
+}
 
 const setProjectsUp = () => {
   // sets project data and events
@@ -27,6 +35,7 @@ const setProjectsUp = () => {
 
 // This will be called on load
 const init = () => {
+  createSpecialProject();
   setProjectsUp();
 };
 
