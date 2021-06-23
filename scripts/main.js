@@ -16,6 +16,10 @@ const createSpecialProject = () => {
   const clone = specialProject.content.firstElementChild.cloneNode(true);
   clone.querySelector('#high-h3').innerText = 'Whatever';
   clone.querySelector('#high-p').innerText = 'Trial';
+  clone.querySelector('.btn-1').addEventListener('click', () => {
+  ProjectData.displaySpecialProject(projectPopUp);
+  projectPopUp.toggleBlur();
+  })
   mainProjectsTarget.appendChild(clone);
 }
 

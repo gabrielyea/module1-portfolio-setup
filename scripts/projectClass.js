@@ -100,7 +100,7 @@ export const projectsData = [
   new Project('6',
     'Project 7',
     'He was so preoccupied with whether or not he could thathe failed to stop to consider if he should. He took one look at what was under the table and noped the hell out of there.',
-    './assets/Img-Placeholder-4.png',
+    './assets/Img-Placeholder-3.png',
     [
       'javascript',
       'Bootstrap',
@@ -135,6 +135,18 @@ export const displayPopProject = (popWindowRef, selectedProject) => {
   popWindowRef.setDescription(selectedProject.querySelector('#project-desc').innerText);
   popWindowRef.setProjectImage(currentPro.projectImage);
   currentPro.technologies.forEach((tech) => {
+    popWindowRef.addTech(createTech(tech));
+  });
+};
+
+export const displaySpecialProject = (popWindowRef) => {
+  const selectedProject = projectsData[6];
+  const pTitle = selectedProject.name;
+  popWindowRef.mainDisplay.classList.add('show');
+  popWindowRef.setTitle(pTitle);
+  popWindowRef.setDescription(selectedProject.description);
+  popWindowRef.setProjectImage(selectedProject.projectImage);
+  selectedProject.technologies.forEach((tech) => {
     popWindowRef.addTech(createTech(tech));
   });
 };
