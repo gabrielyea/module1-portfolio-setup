@@ -36,7 +36,7 @@ export const projectsData = [
   new Project('0',
     'Project 1',
     'He was so preoccupied with whether or not he could thathe failed to stop to consider if he should.',
-    '../assets/Img-Placeholder-6.png',
+    './assets/Img-Placeholder-6.png',
     [
       'ruby',
       'javascript',
@@ -48,7 +48,7 @@ export const projectsData = [
   new Project('1',
     'Project 2',
     'Sometimes I stare at a door or a wall and I wonder what is this reality, why am I alive, and what is this all about?.',
-    '../assets/Img-Placeholder-4.png',
+    './assets/Img-Placeholder-4.png',
     [
       'ruby',
       'javascript',
@@ -58,7 +58,7 @@ export const projectsData = [
   new Project('2',
     'Project 3',
     'Its much more difficult to play tennis with a bowling ball than it is to bowl with a tennis ball.',
-    '../assets/Img-Placeholder-5.png',
+    './assets/Img-Placeholder-5.png',
     [
       'Bootstrap',
       'javascript',
@@ -69,7 +69,7 @@ export const projectsData = [
   new Project('3',
     'Project 4',
     'Culpa velit anim dolor cupidatat qui fugiat commodo commodo adipisicing ad ut ut eiusmod nisi. Quis exercitation amet ex exercitation velit qui est deserunt. Nisi elit quis commodo do veniam.',
-    '../assets/Img-Placeholder-6.png',
+    './assets/Img-Placeholder-6.png',
     [
       'html',
       'javascript',
@@ -79,7 +79,7 @@ export const projectsData = [
   new Project('4',
     'Project 5',
     'He was so preoccupied with whether or not he could thathe failed to stop to consider if he should. He took one look at what was under the table and noped the hell out of there.',
-    '../assets/Img-Placeholder-4.png',
+    'assets/Img-Placeholder-4.png',
     [
       'html',
       'javascript',
@@ -90,7 +90,7 @@ export const projectsData = [
   new Project('5',
     'Project 6',
     'Excepteur elit consequat minim ea consequat cillum irure cillum nisi elit eiusmod. Non eiusmod officia culpa culpa nulla mollit occaecat ut cupidatat amet exercitation nostrud labore dolor. Lorem laborum reprehenderit esse do anim.',
-    '../assets/Img-Placeholder-4.png',
+    './assets/Img-Placeholder-4.png',
     [
       'html',
       'Bootstrap',
@@ -100,7 +100,7 @@ export const projectsData = [
   new Project('6',
     'Project 7',
     'He was so preoccupied with whether or not he could thathe failed to stop to consider if he should. He took one look at what was under the table and noped the hell out of there.',
-    '../assets/Img-Placeholder-4.png',
+    'assets/Img-Placeholder-4.png',
     [
       'javascript',
       'Bootstrap',
