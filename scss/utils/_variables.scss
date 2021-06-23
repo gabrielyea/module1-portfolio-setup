@@ -55,3 +55,13 @@ $main_title_font: 'Crete Round', sans-serif;
     @content;
   }
 }
+
+@mixin customButtonIcon($path, $sizeX, $sizeY) {
+  background-image: url($path);
+  vertical-align: bottom;
+  display: inline-block;
+  width: $sizeX;
+  height: $sizeY;
+  background-repeat: no-repeat;
+  margin-left: 10px;
+}

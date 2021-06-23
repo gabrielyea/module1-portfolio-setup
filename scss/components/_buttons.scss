@@ -113,6 +113,7 @@
     }
   }
 
+  // should show mobile button on desktop
   @include desktopResolution {
     display: none;
   }

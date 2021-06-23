@@ -1,0 +1,137 @@
+@use "../utils"as *;
+
+.pop-project {
+  display: none;
+  z-index: 2;
+
+  &.show {
+    @include flexCenter;
+
+    z-index: 2;
+    animation: fadeIn 0.5s ease-in-out;
+
+    @include fadeInAnimation("fadeIn", 0, 1);
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 24px;
+  }
+
+  img {
+    @include desktopResolution {
+      width: 659px;
+      height: 448px;
+      flex-basis: 60%;
+    }
+
+    width: 100%;
+    height: 50%;
+  }
+
+  &-display {
+    @include flexCenter;
+
+    position: fixed;
+    z-index: 1;
+    background-color: $color_main_text;
+    gap: 24px;
+
+    @include desktopResolution {
+      justify-content: center;
+      width: 1000px;
+      height: 600px;
+      top: 15%;
+      padding: 24px;
+    }
+
+    justify-content: flex-start;
+    height: 85%;
+    top: 10%;
+    width: 90%;
+    padding: 10px;
+  }
+
+  &-title {
+    @include sectionTitle(32px, 44px, #172b4d);
+
+    display: flex;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    color: #344563;
+    gap: 24px;
+
+    @include desktopResolution {
+      font-size: 16px;
+      line-height: 30px;
+      flex-direction: row;
+    }
+  }
+
+  .btn-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .text-container {
+    display: flex;
+
+    @include desktopResolution {
+      flex: 1;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 98%;
+    }
+
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .btn-exit {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    border: none;
+
+    .btn-icon {
+      @include customButtonIcon("../assets/Icon-Exit.png", 24px, 24px);
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  #live-link {
+    .btn-icon {
+      @include customButtonIcon("../assets/Icon-LiveLink.png", 24px, 24px);
+    }
+  }
+
+  #source-link {
+    .btn-icon {
+      @include customButtonIcon("../assets/Icon-GitHub.png", 24px, 24px);
+    }
+  }
+
+  .pl-categories-container {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    flex-wrap: wrap;
+  }
+}
+
+.blur {
+  filter: blur(8px);
+}
