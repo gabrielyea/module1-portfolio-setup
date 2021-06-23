@@ -116,16 +116,21 @@ const createTech = (techName) => {
   return newLi;
 };
 
+export const addTechsToTarget = (target, techList) => {
+  techList.forEach((tech) => {
+    target.appendChild(createTech(tech));
+  });
+};
+
 // This should also work in all projecs types...
 // will try to fix this later...
 export const setProjectData = (emptyProject, projectIndex) => {
-  emptyProject.style.backgroundImage = `url(${projectsData[projectIndex].projectImage})`;
-  emptyProject.querySelector('#project-title').innerText = projectsData[projectIndex].name;
-  emptyProject.querySelector('#project-desc').innerText = projectsData[projectIndex].description;
+  const currentPro = projectsData[projectIndex];
+  emptyProject.style.backgroundImage = `url(${currentPro.projectImage})`;
+  emptyProject.querySelector('#project-title').innerText = currentPro.name;
+  emptyProject.querySelector('#project-desc').innerText = currentPro.description;
   emptyProject.id = `project-card-${projectIndex}`;
-  projectsData[projectIndex].technologies.forEach((tech) => {
-    emptyProject.querySelector('#project-techs').appendChild(createTech(tech));
-  });
+  addTechsToTarget(emptyProject.querySelector('#project-techs'), currentPro.technologies);
   return emptyProject;
 };
 
