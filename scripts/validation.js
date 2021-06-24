@@ -4,7 +4,7 @@ export const formRef = document.querySelector('form');
 const errorMsg = document.getElementById('myPopup');
 const subBtn = document.getElementById('sub-btn');
 const messages = ['No caps allowed!!', 'Write a valid email please!', 'Remeber to use a valid domain!!',
-  'NO CAAAPS!!', 'Maybe you are missing .com?'];
+  'NO CAAAPS!!', 'Maybe you are missing .com?', 'Please use lower case letters.', 'We cannot accept the caps in your email.'];
 
 const pickRandomMessage = () => messages[Math.floor(Math.random() * messages.length)];
 

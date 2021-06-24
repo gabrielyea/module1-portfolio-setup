@@ -13,7 +13,7 @@
   top: 50px;
 
   .popuptext {
-    @include robotoTitle(20px, 20px, $color_second_text);
+    @include robotoTitle(20px, 20px, red);
 
     background-color: $color_back2;
     visibility: hidden;
