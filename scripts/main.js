@@ -1,11 +1,15 @@
 import MobileMenu from './mobileMenu.js';
 import ScrollFocus from './scrollFocus.js';
 import ProjectPopUp from './projectPopUp.js';
+import * as ProjectUtils from './projectsUtils.js';
+import { initProjects } from './setUp.js';
 import * as ProjectData from './projectClass.js';
 import {
   formRef,
   isValidMail,
 } from './validation.js';
+
+initProjects();
 
 const mobileMenu = new MobileMenu();
 const scrollFocus = new ScrollFocus();
@@ -46,10 +50,10 @@ const setProjectsUp = () => {
 };
 
 // This will be called on load
-const init = () => {
-  createSpecialProject();
-  setProjectsUp();
-};
+// const init = () => {
+//   createSpecialProject();
+//   setProjectsUp();
+// };
 
 // ------ Events ------
 mobileMenu.menuBtn.addEventListener('click', () => {
@@ -71,7 +75,7 @@ projectPopUp.exitBtn.addEventListener(('click'), () => {
   projectPopUp.closePopUp();
 });
 
-window.addEventListener('load', init());
+// window.addEventListener('load', init());
 
 formRef.addEventListener('keyup', () => {
   isValidMail();

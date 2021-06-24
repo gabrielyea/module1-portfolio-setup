@@ -1,4 +1,4 @@
-export default class Project {
+export class Project {
   projectIndex;
 
   name;
@@ -31,83 +31,6 @@ export default class Project {
     this.sourceLink = sourceLink;
   }
 }
-
-export const projectsData = [
-  new Project('0',
-    'Project 1',
-    'He was so preoccupied with whether or not he could thathe failed to stop to consider if he should.',
-    './assets/Img-Placeholder-6.png',
-    [
-      'ruby',
-      'javascript',
-      'ruby',
-      'html',
-    ],
-    'https://longdogechallenge.com/',
-    'https://alwaysjudgeabookbyitscover.com/'),
-  new Project('1',
-    'Project 2',
-    'Sometimes I stare at a door or a wall and I wonder what is this reality, why am I alive, and what is this all about?.',
-    './assets/Img-Placeholder-4.png',
-    [
-      'ruby',
-      'javascript',
-    ],
-    'http://eelslap.com/',
-    'http://www.staggeringbeauty.com/'),
-  new Project('2',
-    'Project 3',
-    'Its much more difficult to play tennis with a bowling ball than it is to bowl with a tennis ball.',
-    './assets/Img-Placeholder-5.png',
-    [
-      'Bootstrap',
-      'javascript',
-      'ruby',
-    ],
-    'http://corndog.io/',
-    'https://smashthewalls.com/'),
-  new Project('3',
-    'Project 4',
-    'Culpa velit anim dolor cupidatat qui fugiat commodo commodo adipisicing ad ut ut eiusmod nisi. Quis exercitation amet ex exercitation velit qui est deserunt. Nisi elit quis commodo do veniam.',
-    './assets/Img-Placeholder-6.png',
-    [
-      'html',
-      'javascript',
-    ],
-    'https://jacksonpollock.org/',
-    'http://www.republiquedesmangues.fr/'),
-  new Project('4',
-    'Project 5',
-    'He was so preoccupied with whether or not he could thathe failed to stop to consider if he should. He took one look at what was under the table and noped the hell out of there.',
-    './assets/Img-Placeholder-4.png',
-    [
-      'html',
-      'javascript',
-      'Bootstrap',
-    ],
-    'http://corndog.io/',
-    'https://longdogechallenge.com/'),
-  new Project('5',
-    'Project 6',
-    'Excepteur elit consequat minim ea consequat cillum irure cillum nisi elit eiusmod. Non eiusmod officia culpa culpa nulla mollit occaecat ut cupidatat amet exercitation nostrud labore dolor. Lorem laborum reprehenderit esse do anim.',
-    './assets/Img-Placeholder-4.png',
-    [
-      'html',
-      'Bootstrap',
-    ],
-    'http://www.staggeringbeauty.com/',
-    'https://smashthewalls.com/'),
-  new Project('6',
-    'Project 7',
-    'He was so preoccupied with whether or not he could thathe failed to stop to consider if he should. He took one look at what was under the table and noped the hell out of there.',
-    './assets/Img-Placeholder-3.png',
-    [
-      'javascript',
-      'Bootstrap',
-    ],
-    'https://alwaysjudgeabookbyitscover.com/',
-    'http://corndog.io/'),
-];
 
 const createTech = (techName) => {
   const newLi = document.createElement('LI');
@@ -164,4 +87,15 @@ export const displaySpecialProject = (popWindowRef) => {
   });
   document.querySelector('#live-link').setAttribute('href', selectedProject.liveLink);
   document.querySelector('#source-link').setAttribute('href', selectedProject.sourceLink);
+};
+
+/**
+ * Appends a clone element to the target element.
+ *
+ * @param {object} clone The html element to clone.
+ * @param {object} target The would be parent of the.
+ * @return {number} x raised to the n-th power.
+ */
+export const createProjectInPage = (clone, target) => {
+
 };
