@@ -785,6 +785,10 @@ nav ul li.on-view a {
   background-color: #f55800;
   transition: all 0.1s ease-in;
 }
+.btn-1.disable {
+  background-color: #f4f1f0;
+  color: #1c1a19;
+}
 
 .btn-1:hover {
   color: #f55800;
@@ -792,10 +796,18 @@ nav ul li.on-view a {
   box-sizing: border-box;
   background-color: #fff5e1;
 }
+.btn-1:hover.disable {
+  background-color: #f4f1f0;
+  color: #1c1a19;
+}
 
 .btn-1:active {
   background: #e05304;
   color: white;
+}
+.btn-1:active.disable {
+  background-color: #f4f1f0;
+  color: #1c1a19;
 }
 
 .large-btn {
@@ -883,6 +895,49 @@ nav ul li.on-view a {
 @media only screen and (min-width: 992px) {
   .menu-btn {
     display: none;
+  }
+}
+
+.popup {
+  position: relative;
+  display: inline-block;
+  right: 80px;
+  top: 50px;
+}
+@media only screen and (min-width: 992px) {
+  .popup {
+    right: 200px;
+    top: 0;
+  }
+}
+.popup .popuptext {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
+  color: red;
+  background-color: #3c3a39;
+  visibility: hidden;
+  width: 160px;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+}
+.popup .popuptext.show {
+  visibility: visible;
+  animation: fadeIn 1s;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 

@@ -21,7 +21,7 @@ export default class ProjectPopUp {
 
   projectDesc = document.getElementById('pop-project-desc');
 
-  liveLink = document.getElementById('like-link');
+  liveLink = document.getElementById('live-link');
 
   sourceLink = document.getElementById('source-link');
 
@@ -29,25 +29,31 @@ export default class ProjectPopUp {
 
   setTitle = (title) => {
     this.projectTitle.innerText = title;
-  }
+  };
 
   setDescription = (desc) => {
     this.projectDesc.innerText = desc;
-  }
-
-  addTech = (tech) => {
-    this.techs.appendChild(tech);
-  }
+  };
 
   setProjectImage = (path) => {
     this.projectImg.src = path;
-  }
+  };
 
   closePopUp = () => {
     this.removeChilds(this.techs);
     this.mainDisplay.classList.remove('show');
     this.toggleBlur();
-  }
+  };
+
+  openPopUp = (info) => {
+    this.setTitle(info.name);
+    this.setDescription(info.description);
+    this.setProjectImage(info.projectImage);
+    this.liveLink.setAttribute('href', info.liveLink);
+    this.sourceLink.setAttribute('href', info.sourceLink);
+    this.mainDisplay.classList.toggle('show');
+    this.toggleBlur();
+  };
 
   removeChilds = (parent) => {
     while (parent.lastChild) {
@@ -55,23 +61,23 @@ export default class ProjectPopUp {
     }
   };
 
+  toggleModal = (info) => {
+    this.setTitle(info.name);
+    this.setDescription(info.description);
+    this.setProjectImage(info.projectImage);
+    this.mainDisplay.classList.toggle('show');
+    this.toggleBlur();
+  }
+
   // this should be on a utilities class
   // too lazy to do it now :c
   toggleBlur = () => {
     // this should be a loop... lazy :C
-    if (this.isPopClose) {
-      this.headline.classList.add('blur');
-      this.recentWorks.classList.add('blur');
-      this.aboutMe.classList.add('blur');
-      this.skillTechs.classList.add('blur');
-      this.contactMe.classList.add('blur');
-    } else {
-      this.headline.classList.remove('blur');
-      this.recentWorks.classList.remove('blur');
-      this.aboutMe.classList.remove('blur');
-      this.skillTechs.classList.remove('blur');
-      this.contactMe.classList.remove('blur');
-    }
+    this.headline.classList.toggle('blur');
+    this.recentWorks.classList.toggle('blur');
+    this.aboutMe.classList.toggle('blur');
+    this.skillTechs.classList.toggle('blur');
+    this.contactMe.classList.toggle('blur');
     this.isPopClose = !this.isPopClose;
-  }
+  };
 }

@@ -1,0 +1,44 @@
+@use "../utils"as *;
+
+.popup {
+  position: relative;
+  display: inline-block;
+
+  @include desktopResolution {
+    right: 200px;
+    top: 0;
+  }
+
+  right: 80px;
+  top: 50px;
+
+  .popuptext {
+    @include robotoTitle(20px, 20px, red);
+
+    background-color: $color_back2;
+    visibility: hidden;
+    width: 160px;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+
+    &.show {
+      visibility: visible;
+      animation: fadeIn 1s;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+}

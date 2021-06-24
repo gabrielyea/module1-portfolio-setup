@@ -13,15 +13,30 @@
   color: $color_main_text;
   background-color: $color_main_orange;
   transition: all 0.1s ease-in;
+
+  &.disable {
+    background-color: #f4f1f0;
+    color: $color_back1;
+  }
 }
 
 .btn-1:hover {
   @include hoverAnimation($color_main_orange);
+
+  &.disable {
+    background-color: #f4f1f0;
+    color: $color_back1;
+  }
 }
 
 .btn-1:active {
   background: $color_dark_orange;
   color: $color_main_text;
+
+  &.disable {
+    background-color: #f4f1f0;
+    color: $color_back1;
+  }
 }
 
 .large-btn {
