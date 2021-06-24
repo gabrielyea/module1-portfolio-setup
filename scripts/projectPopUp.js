@@ -21,7 +21,7 @@ export default class ProjectPopUp {
 
   projectDesc = document.getElementById('pop-project-desc');
 
-  liveLink = document.getElementById('like-link');
+  liveLink = document.getElementById('live-link');
 
   sourceLink = document.getElementById('source-link');
 
@@ -33,10 +33,6 @@ export default class ProjectPopUp {
 
   setDescription = (desc) => {
     this.projectDesc.innerText = desc;
-  };
-
-  addTech = (tech) => {
-    this.techs.appendChild(tech);
   };
 
   setProjectImage = (path) => {
@@ -52,7 +48,10 @@ export default class ProjectPopUp {
   openPopUp = (info) => {
     this.setTitle(info.name);
     this.setDescription(info.description);
-    this.mainDisplay.classList.add('show');
+    this.setProjectImage(info.projectImage);
+    this.liveLink.setAttribute('href', info.liveLink);
+    this.sourceLink.setAttribute('href', info.sourceLink);
+    this.mainDisplay.classList.toggle('show');
     this.toggleBlur();
   };
 
@@ -61,6 +60,14 @@ export default class ProjectPopUp {
       parent.removeChild(parent.lastChild);
     }
   };
+
+  toggleModal = (info) => {
+    this.setTitle(info.name);
+    this.setDescription(info.description);
+    this.setProjectImage(info.projectImage);
+    this.mainDisplay.classList.toggle('show');
+    this.toggleBlur();
+  }
 
   // this should be on a utilities class
   // too lazy to do it now :c

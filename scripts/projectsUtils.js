@@ -1,7 +1,21 @@
 import * as Data from './projectsData.js';
 import ProjectPopUp from './projectPopUp.js';
 
-const display = new ProjectPopUp();
+export const display = new ProjectPopUp();
+export const d = Data;
+
+export const createTech = (techName) => {
+  const newLi = document.createElement('LI');
+  newLi.classList.add('pl-block');
+  newLi.innerText = techName;
+  return newLi;
+};
+
+export const addTechsToTarget = (target, techList) => {
+  techList.forEach((tech) => {
+    target.appendChild(createTech(tech));
+  });
+};
 
 /**
  * Set the project info
@@ -11,9 +25,13 @@ const display = new ProjectPopUp();
 export const setInfo = (projectInfo, target) => {
   target.querySelector('.project-title').innerText = projectInfo.name;
   target.querySelector('.project-desc').innerText = projectInfo.description;
+  target.style.backgroundImage = `url(${projectInfo.projectImage})`;
   target.querySelector('.btn-1').addEventListener('click', () => {
     display.openPopUp(projectInfo);
+    addTechsToTarget(display.techs, projectInfo.technologies);
   });
+
+  addTechsToTarget(target.querySelector('.pl-categories-container'), projectInfo.technologies);
 };
 
 /**
@@ -34,20 +52,9 @@ export const createProject = (elementToClone, target) => {
  */
 export const readAndWriteProjects = (elementToClone, target) => {
   Data.projectData.forEach((data) => {
-    const newPro = createProject(elementToClone, target);
-    setInfo(data, newPro);
-  });
-};
-
-export const createTech = (techName) => {
-  const newLi = document.createElement('LI');
-  newLi.classList.add('pl-block');
-  newLi.innerText = techName;
-  return newLi;
-};
-
-export const addTechsToTarget = (target, techList) => {
-  techList.forEach((tech) => {
-    target.appendChild(createTech(tech));
+    if (data.name !== 'Project 7') {
+      const newPro = createProject(elementToClone, target);
+      setInfo(data, newPro);
+    }
   });
 };
