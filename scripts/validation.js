@@ -2,22 +2,24 @@ export const email = document.getElementById('email');
 export const formRef = document.querySelector('form');
 
 const errorMsg = document.getElementById('myPopup');
-const subBtn = document.getElementById('sub-btn');
-const messages = ['No caps allowed!!', 'Write a valid email please!', 'Remeber to use a valid domain!!',
-  'NO CAAAPS!!', 'Maybe you are missing .com?', 'Please use lower case letters.', 'We cannot accept the caps in your email.'];
+// const subBtn = document.getElementById('sub-btn');
+const messages = ['No caps allowed!!', 'NO CAAAPS ON EMAIL!!', 'Please use lower case letters.'];
 
-const pickRandomMessage = () => messages[Math.floor(Math.random() * messages.length)];
+export const pickRandomMessage = () => messages[Math.floor(Math.random() * messages.length)];
 
 export const isValidMail = () => {
   if (/[A-Z]/g.test(email.value) || email.validity.typeMismatch) {
-    subBtn.classList.add('disable');
-    errorMsg.classList.add('show');
-    errorMsg.innerText = pickRandomMessage();
-    subBtn.disabled = true;
+    // subBtn.classList.add('disable');
+    // subBtn.disabled = true;
     return false;
   }
-  subBtn.classList.remove('disable');
+  // subBtn.classList.remove('disable');
+  // subBtn.disabled = false;
   errorMsg.classList.remove('show');
-  subBtn.disabled = false;
   return true;
+};
+
+export const displayError = () => {
+  errorMsg.classList.add('show');
+  errorMsg.innerText = pickRandomMessage();
 };

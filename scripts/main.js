@@ -5,6 +5,7 @@ import { initProjects } from './setUp.js';
 import {
   formRef,
   isValidMail,
+  displayError,
 } from './validation.js';
 
 const mobileMenu = new MobileMenu();
@@ -35,4 +36,11 @@ window.addEventListener('load', initProjects());
 
 formRef.addEventListener('keyup', () => {
   isValidMail();
+});
+
+formRef.addEventListener('submit', (e) => {
+  if (!isValidMail()) {
+    e.preventDefault();
+    displayError();
+  }
 });
