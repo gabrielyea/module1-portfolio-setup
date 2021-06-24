@@ -2,6 +2,10 @@ import MobileMenu from './mobileMenu.js';
 import ScrollFocus from './scrollFocus.js';
 import ProjectPopUp from './projectPopUp.js';
 import * as ProjectData from './projectClass.js';
+import {
+  formRef,
+  isValidMail,
+} from './validation.js';
 
 const mobileMenu = new MobileMenu();
 const scrollFocus = new ScrollFocus();
@@ -68,3 +72,7 @@ projectPopUp.exitBtn.addEventListener(('click'), () => {
 });
 
 window.addEventListener('load', init());
+
+formRef.addEventListener('keyup', () => {
+  isValidMail();
+});
