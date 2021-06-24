@@ -41,6 +41,5 @@ formRef.addEventListener('keyup', () => {
 formRef.addEventListener('submit', (e) => {
   if (!isValidMail()) {
     e.preventDefault();
-    displayError();
   }
 });
