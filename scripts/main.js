@@ -6,6 +6,7 @@ import {
   formRef,
   isValidMail,
 } from './validation.js';
+import { saveInputData, loadInputData } from './storage.js';
 
 const mobileMenu = new MobileMenu();
 const scrollFocus = new ScrollFocus();
@@ -31,10 +32,14 @@ projectPopUp.exitBtn.addEventListener(('click'), () => {
   projectPopUp.closePopUp();
 });
 
-window.addEventListener('load', initProjects());
+window.addEventListener('load', () => {
+  initProjects();
+  loadInputData();
+});
 
 formRef.addEventListener('keyup', () => {
   isValidMail(false);
+  saveInputData();
 });
 
 formRef.addEventListener('submit', (e) => {
